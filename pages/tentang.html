@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Kediri Tourism</title>
+    <meta name="description" content="Kenali lebih dalam tentang Kediri Tourism - portal wisata resmi Kota Kediri dengan misi mempromosikan keindahan dan budaya lokal">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/tentang.css">
+</head>
+<body>
+    <div class="toast-container" id="toastContainer"></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.jpg" alt="Logo Kediri Tourism" height="40" width="40">
+                <span>Kediri Tourism</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wisata.html">Wisata</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kuliner.html">Kuliner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="budaya.html">Budaya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="peta.html">Peta</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tentang.html">Tentang</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <div class="real-time-clock me-3 d-none d-md-block">
+                        <small class="text-muted" id="realTimeClock"></small>
+                    </div>
+                    <button class="btn btn-sm btn-outline-secondary" id="themeToggle">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                    <button class="btn btn-sm btn-primary" id="locationAccess">
+                        <i class="bi bi-geo-alt"></i> <span class="d-none d-md-inline">Lokasi</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item active text-white">Tentang Kami</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold mb-3">Tentang Kediri Tourism</h1>
+                    <p class="lead mb-0">Portal wisata resmi Kota Kediri yang menghubungkan pengunjung dengan keindahan alam, kuliner, dan budaya lokal</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <div class="header-stats">
+                        <h3 class="mb-0 text-white">2024</h3>
+                        <small class="text-white-50">Tahun Berdiri</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Section -->
+    <section class="quick-info-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <div class="info-content">
+                            <h5>Jam Operasional</h5>
+                            <p>Senin - Minggu: 08:00 - 22:00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h5>Telepon Darurat</h5>
+                            <p>(0354) 123456</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <div class="info-content">
+                            <h5>WhatsApp</h5>
+                            <p>+62 812-3456-7890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding scroll-reveal">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">Siapa Kami?</h2>
+                    <p class="lead">Kediri Tourism adalah platform digital resmi yang didedikasikan untuk mempromosikan pariwisata Kota Kediri kepada dunia.</p>
+                    
+                    <p>Kami hadir sebagai solusi lengkap bagi wisatawan yang ingin menjelajahi keindahan Kediri, dari destinasi alam yang menakjubkan, kuliner legendaris, hingga kekayaan budaya yang autentik.</p>
+                    
+                    <p>Dengan teknologi terkini dan informasi yang terpercaya, kami berkomitmen untuk memberikan pengalaman berwisata yang tak terlupakan di Kota Tahu yang penuh pesona ini.</p>
+                    
+                    <div class="mt-4">
+                        <a href="kontak.html" class="btn btn-primary btn-lg me-3">
+                            <i class="bi bi-envelope"></i> Hubungi Kami
+                        </a>
+                        <a href="../index.html" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-compass"></i> Jelajahi Kediri
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="../images/about-hero.jpg" alt="Kediri Tourism" class="img-fluid w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section-padding bg-light scroll-reveal">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card p-4">
+                        <h2 class="display-4 text-primary fw-bold">50+</h2>
+                        <p class="mb-0 text-muted">Destinasi Wisata</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card p-4">
+                        <h2 class="display-4 text-primary fw-bold">100+</h2>
+                        <p class="mb-0 text-muted">Kuliner Khas</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card p-4">
+                        <h2 class="display-4 text-primary fw-bold">15+</h2>
+                        <p class="mb-0 text-muted">Budaya & Tradisi</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card p-4">
+                        <h2 class="display-4 text-primary fw-bold">10K+</h2>
+                        <p class="mb-0 text-muted">Pengunjung/Bulan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding scroll-reveal">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="mission-card p-4 h-100">
+                        <div class="mission-icon mb-4">
+                            <i class="bi bi-bullseye display-4 text-primary"></i>
+                        </div>
+                        <h3 class="mb-4">Misi Kami</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Memperkenalkan potensi pariwisata Kediri secara komprehensif
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Menyediakan informasi akurat dan terupdate untuk wisatawan
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Mendorong pertumbuhan ekonomi kreatif lokal
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Melestarikan dan mempromosikan budaya lokal
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                Menyediakan platform digital yang mudah digunakan
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="vision-card p-4 h-100">
+                        <div class="vision-icon mb-4">
+                            <i class="bi bi-eye display-4 text-primary"></i>
+                        </div>
+                        <h3 class="mb-4">Visi Kami</h3>
+                        <p class="lead mb-4">Menjadikan Kediri sebagai destinasi wisata utama di Jawa Timur yang dikenal secara nasional dan internasional melalui platform digital yang inovatif dan informatif.</p>
+                        
+                        <div class="vision-targets">
+                            <div class="target-item mb-3">
+                                <h5 class="text-primary">2025</h5>
+                                <p class="mb-0">Menjadi referensi utama wisatawan domestik</p>
+                            </div>
+                            <div class="target-item mb-3">
+                                <h5 class="text-primary">2027</h5>
+                                <p class="mb-0">Diakui sebagai platform wisata digital terbaik se-Jawa Timur</p>
+                            </div>
+                            <div class="target-item">
+                                <h5 class="text-primary">2030</h5>
+                                <p class="mb-0">Mendorong peningkatan 50% kunjungan wisatawan mancanegara</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayer Times & Local Info -->
+    <section class="section-padding bg-light scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Informasi Lokal</h2>
+                <p class="section-subtitle">Jadwal dan informasi penting untuk kenyamanan Anda</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card prayer-times-card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="bi bi-clock"></i> Jadwal Shalat Hari Ini</h5>
+                            <small id="prayerDate" class="text-white-50"></small>
+                        </div>
+                        <div class="card-body">
+                            <div class="prayer-times-grid">
+                                <div class="prayer-time-item">
+                                    <span class="prayer-name">Subuh</span>
+                                    <span class="prayer-time" id="fajrTime">04:15</span>
+                                </div>
+                                <div class="prayer-time-item">
+                                    <span class="prayer-name">Dzuhur</span>
+                                    <span class="prayer-time" id="dhuhrTime">11:45</span>
+                                </div>
+                                <div class="prayer-time-item">
+                                    <span class="prayer-name">Ashar</span>
+                                    <span class="prayer-time" id="asrTime">15:00</span>
+                                </div>
+                                <div class="prayer-time-item">
+                                    <span class="prayer-name">Maghrib</span>
+                                    <span class="prayer-time" id="maghribTime">17:45</span>
+                                </div>
+                                <div class="prayer-time-item">
+                                    <span class="prayer-name">Isya</span>
+                                    <span class="prayer-time" id="ishaTime">19:00</span>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <small class="text-muted">* Waktu shalat berdasarkan lokasi Kediri</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card local-info-card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="bi bi-info-circle"></i> Informasi Penting</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="local-info-list">
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="bi bi-sun text-warning"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <h6>Cuaca Hari Ini</h6>
+                                        <p class="mb-0">Cerah, 28°C - 32°C</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="bi bi-calendar-event text-primary"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <h6>Event Mendatang</h6>
+                                        <p class="mb-0">Festival Tahu Takwa - 15 Des 2024</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="bi bi-exclamation-triangle text-danger"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <h6>Peringatan</h6>
+                                        <p class="mb-0">Gunung Kelud Status Normal</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="bi bi-telephone text-success"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <h6>Darurat</h6>
+                                        <p class="mb-0">Call Center: (0354) 123456</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nilai-nilai Kami</h2>
+                <p class="section-subtitle">Prinsip yang menjadi pedoman dalam setiap layanan kami</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="value-card p-4">
+                        <div class="value-icon mb-3">
+                            <i class="bi bi-shield-check display-4 text-primary"></i>
+                        </div>
+                        <h5>Terpercaya</h5>
+                        <p class="text-muted">Informasi yang akurat dan dapat diandalkan dari sumber terverifikasi</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="value-card p-4">
+                        <div class="value-icon mb-3">
+                            <i class="bi bi-heart display-4 text-primary"></i>
+                        </div>
+                        <h5>Peduli</h5>
+                        <p class="text-muted">Memprioritaskan kepuasan dan kenyamanan pengguna dalam setiap layanan</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="value-card p-4">
+                        <div class="value-icon mb-3">
+                            <i class="bi bi-lightbulb display-4 text-primary"></i>
+                        </div>
+                        <h5>Inovatif</h5>
+                        <p class="text-muted">Terus berinovasi dengan teknologi terkini untuk pengalaman terbaik</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="value-card p-4">
+                        <div class="value-icon mb-3">
+                            <i class="bi bi-people display-4 text-primary"></i>
+                        </div>
+                        <h5>Kolaboratif</h5>
+                        <p class="text-muted">Bekerja sama dengan komunitas lokal untuk perkembangan bersama</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mitra Kerja Sama</h2>
+                <p class="section-subtitle">Berkolaborasi dengan berbagai pihak untuk pengembangan pariwisata Kediri</p>
+            </div>
+            
+            <div class="row align-items-center justify-content-center g-4">
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="partner-logo">
+                        <img src="../images/partners/pemkot-kediri.jpg" alt="Pemkot Kediri" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="partner-logo">
+                        <img src="../images/partners/disparbud.jpg" alt="Dinas Pariwisata" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="partner-logo">
+                        <img src="../images/partners/hotel-association.jpg" alt="Asosiasi Hotel" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="partner-logo">
+                        <img src="../images/partners/culinary-group.jpg" alt="Komunitas Kuliner" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="partner-logo">
+                        <img src="../images/partners/travel-agent.jpg" alt="Travel Agent" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section scroll-reveal">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h3 class="text-white mb-3">Siap Menjelajahi Kediri?</h3>
+                    <p class="text-white mb-0 opacity-75">Mulai petualangan Anda di Kota Tahu dengan panduan lengkap dari kami.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="../index.html" class="btn btn-light btn-lg">
+                        <i class="bi bi-compass"></i> Jelajahi Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="../images/logo.jpg" alt="Logo Kediri Tourism" height="40" class="mb-3">
+                    <p class="mb-4">Portal wisata resmi Kota Kediri yang menyediakan informasi lengkap tentang destinasi, kuliner, budaya, dan navigasi real-time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Menu</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="wisata.html">Wisata</a></li>
+                        <li><a href="kuliner.html">Kuliner</a></li>
+                        <li><a href="budaya.html">Budaya</a></li>
+                        <li><a href="peta.html">Peta</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h5>Informasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt"></i> Jl. Mayor Bismo No.1, Kediri</li>
+                        <li class="mb-2"><i class="bi bi-telephone"></i> (0354) 123456</li>
+                        <li class="mb-2"><i class="bi bi-envelope"></i> info@kediri-tourism.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0">&copy; 2024 Kediri Tourism. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for Kediri</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        class TentangPage {
+            constructor() {
+                this.init();
+            }
+            
+            init() {
+                this.setupTheme();
+                this.setupEventListeners();
+                this.startRealTimeClock();
+                this.updatePrayerDate();
+                this.setupScrollEffects();
+            }
+            
+            setupTheme() {
+                const theme = localStorage.getItem('theme') || 'light';
+                document.documentElement.setAttribute('data-bs-theme', theme);
+                const icon = document.querySelector('#themeToggle i');
+                icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
+            }
+            
+            startRealTimeClock() {
+                const updateClock = () => {
+                    const now = new Date();
+                    const options = { 
+                        weekday: 'long', 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        timeZone: 'Asia/Jakarta'
+                    };
+                    
+                    const dateTime = now.toLocaleDateString('id-ID', options);
+                    document.getElementById('realTimeClock').textContent = dateTime;
+                };
+
+                updateClock();
+                setInterval(updateClock, 1000);
+            }
+            
+            updatePrayerDate() {
+                const today = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('prayerDate').textContent = today.toLocaleDateString('id-ID', options);
+            }
+            
+            setupEventListeners() {
+                document.getElementById('themeToggle').addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-bs-theme');
+                    const theme = current === 'light' ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                    localStorage.setItem('theme', theme);
+                    this.setupTheme();
+                });
+
+                document.getElementById('locationAccess').addEventListener('click', () => {
+                    this.requestLocation();
+                });
+
+                window.addEventListener('scroll', () => {
+                    const navbar = document.querySelector('.navbar');
+                    const backToTop = document.getElementById('backToTop');
+                    
+                    if (window.scrollY > 100) {
+                        if (navbar) navbar.classList.add('scrolled');
+                        if (backToTop) backToTop.classList.add('show');
+                    } else {
+                        if (navbar) navbar.classList.remove('scrolled');
+                        if (backToTop) backToTop.classList.remove('show');
+                    }
+                });
+
+                document.getElementById('backToTop').addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+            
+            setupScrollEffects() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.scroll-reveal').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            requestLocation() {
+                if (!navigator.geolocation) {
+                    this.showNotification('Browser tidak mendukung geolocation', 'danger');
+                    return;
+                }
+
+                this.showNotification('Mendeteksi lokasi...', 'info');
+
+                navigator.geolocation.getCurrentPosition(
+                    () => {
+                        this.showNotification('Lokasi terdeteksi!', 'success');
+                    },
+                    () => {
+                        this.showNotification('Gagal mengakses lokasi', 'danger');
+                    }
+                );
+            }
+            
+            showNotification(message, type) {
+                const types = {
+                    success: { icon: 'check-circle-fill', color: 'success' },
+                    danger: { icon: 'x-circle-fill', color: 'danger' },
+                    info: { icon: 'info-circle-fill', color: 'info' }
+                };
+                
+                const notif = types[type] || types.info;
+                
+                const alert = document.createElement('div');
+                alert.className = `alert alert-${notif.color} alert-dismissible fade show alert-notification`;
+                alert.innerHTML = `
+                    <i class="bi bi-${notif.icon} me-2"></i>
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                
+                document.getElementById('toastContainer').appendChild(alert);
+                
+                setTimeout(() => {
+                    if (alert.parentNode) {
+                        alert.remove();
+                    }
+                }, 3000);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            window.tentangPage = new TentangPage();
+        });
+    </script>
+</body>
+</html>

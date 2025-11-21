@@ -1,0 +1,1653 @@
+{
+  "website": {
+    "name": "Kediri Tourism",
+    "description": "Portal wisata resmi Kota Kediri",
+    "theme": {
+      "primary": "#2c786c",
+      "primary-dark": "#1a4d44",
+      "primary-light": "#3d9d8f",
+      "secondary": "#ff9800",
+      "accent": "#004445"
+    }
+  },
+  "contact": {
+    "office": {
+      "address": "Jl. Mayor Bismo No. 1, Kota Kediri, Jawa Timur 64125 Indonesia",
+      "phone": "(0354) 123456",
+      "whatsapp": "+6281234567890",
+      "email": "info@kediri-tourism.com",
+      "maps": "https://maps.google.com/?q=Kediri,East+Java"
+    },
+    "social": {
+      "instagram": "https://instagram.com/kediritourism",
+      "facebook": "https://facebook.com/kediritourism",
+      "twitter": "https://twitter.com/kediritourism",
+      "youtube": "https://youtube.com/kediritourism",
+      "tiktok": "https://tiktok.com/@kediritourism"
+    },
+    "hours": {
+      "customerService": {
+        "weekdays": "Senin - Jumat: 08:00 - 17:00",
+        "saturday": "Sabtu: 08:00 - 15:00"
+      },
+      "whatsapp": {
+        "everyday": "Setiap Hari: 07:00 - 22:00",
+        "response": "Respon dalam 1 jam"
+      }
+    },
+    "emergency": [
+      {
+        "name": "Polisi",
+        "number": "110",
+        "icon": "telephone-fill",
+        "color": "danger",
+        "description": "Layanan 24 jam"
+      },
+      {
+        "name": "Ambulans",
+        "number": "118 / 119",
+        "icon": "ambulance",
+        "color": "warning",
+        "description": "Layanan 24 jam"
+      },
+      {
+        "name": "Pemadam Kebakaran",
+        "number": "113",
+        "icon": "fire",
+        "color": "info",
+        "description": "Layanan 24 jam"
+      },
+      {
+        "name": "RS Gambiran",
+        "number": "(0354) 681333",
+        "icon": "hospital",
+        "color": "success",
+        "description": "Rumah Sakit Umum"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Bagaimana cara menggunakan peta interaktif di website ini?",
+        "answer": "Anda dapat menggunakan peta interaktif dengan mengklik menu 'Peta' di navigasi. Di sana Anda dapat mencari lokasi, melihat kategori tempat, mendapatkan petunjuk arah, dan menggunakan fitur Street View. Pastikan lokasi GPS Anda aktif untuk pengalaman terbaik."
+      },
+      {
+        "question": "Apakah informasi di website ini selalu terupdate?",
+        "answer": "Ya, kami berusaha untuk selalu memperbarui informasi secara berkala. Namun, untuk informasi yang sangat dinamis seperti jam operasional dan harga tiket, kami menyarankan untuk menghubungi langsung tempat yang bersangkutan sebelum berkunjung."
+      },
+      {
+        "question": "Bisakah saya mengajukan destinasi wisata baru untuk ditambahkan?",
+        "answer": "Tentu! Kami sangat terbuka dengan saran dan rekomendasi dari pengunjung. Anda dapat mengirimkan usulan destinasi baru melalui form kontak di halaman ini. Tim kami akan melakukan verifikasi sebelum menambahkannya ke website."
+      },
+      {
+        "question": "Apakah Kediri Tourism menyediakan pemandu wisata?",
+        "answer": "Saat ini kami belum menyediakan layanan pemandu wisata langsung. Namun, kami dapat merekomendasikan pemandu wisata terpercaya di Kediri. Silakan hubungi kami melalui WhatsApp untuk informasi lebih lanjut."
+      },
+      {
+        "question": "Bagaimana cara berlangganan newsletter Kediri Tourism?",
+        "answer": "Anda dapat berlangganan newsletter dengan mengisi form di bagian bawah halaman beranda atau dengan mencentang opsi berlangganan newsletter saat mengisi form kontak. Kami akan mengirimkan update tentang destinasi baru, event, dan promo khusus secara berkala."
+      }
+    ]
+  },
+  "team": [
+    {
+      "id": 1,
+      "name": "Alif Amrullah Febrian afgani",
+      "position": "Full Stack Developer",
+      "image": "../images/team/alif.jpg",
+      "bio": "Full stack web developer dengan pengalaman dalam membangun aplikasi web responsif dan dinamis. Ahli dalam berbagai teknologi front-end dan back-end serta memiliki",
+      "social": {
+        "email": "owner@alif.com",
+        "linkedin": "#Alif",
+        "instagram": "#"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Muammar Rafael Gasela",
+      "position": "UI/UX designer",
+      "image": "../images/team/rafael.jpg",
+      "bio": "ui/UX designer berpengalaman dengan keahlian dalam menciptakan antarmuka yang intuitif dan menarik. Berfokus pada pengalaman pengguna yang optimal melalui desain yang inovatif dan fungsional.",
+      "social": {
+        "email": "owner@rafael.com",
+        "linkedin": "#",
+        "instagram": "#"
+      }
+    }
+  ],
+  "error": {
+    "title": "Halaman Tidak Ditemukan",
+    "message": "Sepertinya Anda tersesat dalam penjelajahan Kediri. Halaman yang Anda cari mungkin telah dipindahkan, dihapus, atau tidak pernah ada.",
+    "suggestions": [
+      {
+        "title": "Destinasi Wisata",
+        "icon": "compass",
+        "link": "pages/wisata.html",
+        "color": "primary"
+      },
+      {
+        "title": "Kuliner Khas",
+        "icon": "egg-fried",
+        "link": "pages/kuliner.html",
+        "color": "warning"
+      },
+      {
+        "title": "Peta Interaktif",
+        "icon": "map",
+        "link": "pages/peta.html",
+        "color": "info"
+      }
+    ]
+  },
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Gunung Kelud",
+      "slug": "gunung-kelud",
+      "category": "alam",
+      "image": "../images/destinations/gunung-kelud.jpg",
+      "rating": 4.8,
+      "reviews": 1247,
+      "description": "Gunung berapi aktif dengan kawah yang menakjubkan dan pemandangan alam yang memukau.",
+      "price": "Rp 15.000",
+      "priceCategory": "murah",
+      "distance": "25 km",
+      "featured": true,
+      "tags": [
+        "Alam",
+        "Petualangan",
+        "Fotografi"
+      ],
+      "details": {
+        "alamat": "Kecamatan Ngancar, Kabupaten Kediri, Jawa Timur",
+        "jamOperasional": "06:00 - 17:00 WIB",
+        "fasilitas": [
+          "Parkir",
+          "Toilet",
+          "Warung Makan",
+          "Pemandu Wisata"
+        ],
+        "kontak": "(0857 9137 1559)"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Candi Surowono",
+      "slug": "candi-surowono",
+      "category": "sejarah",
+      "image": "../images/destinations/candi-surowono.jpg",
+      "rating": 4.5,
+      "reviews": 892,
+      "description": "Candi peninggalan Kerajaan Majapahit dengan arsitektur yang masih terawat.",
+      "price": "Rp 5.000",
+      "priceCategory": "murah",
+      "distance": "18 km",
+      "featured": true,
+      "tags": [
+        "Sejarah",
+        "Budaya",
+        "Edukasi"
+      ],
+      "details": {
+        "alamat": "Desa Canggu, Kecamatan Pare, Kabupaten Kediri",
+        "jamOperasional": "08:00 - 16:00 WIB",
+        "fasilitas": [
+          "Parkir",
+          "Toilet",
+          "Museum Kecil"
+        ],
+        "kontak": "(0354691776)"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Air Terjun Dolo",
+      "slug": "air-terjun-dolo",
+      "category": "alam",
+      "image": "../images/destinations/air-terjun-dolo.jpg",
+      "rating": 4.7,
+      "reviews": 956,
+      "description": "Air terjun dengan ketinggian 125 meter dikelilingi hutan yang asri.",
+      "price": "Rp 8.000",
+      "priceCategory": "murah",
+      "distance": "30 km",
+      "featured": true,
+      "tags": [
+        "Alam",
+        "Petualangan",
+        "Piknik"
+      ],
+      "details": {
+        "alamat": "Desa Jugo, Kecamatan Mojo, Kabupaten Kediri",
+        "jamOperasional": "07:00 - 16:00 WIB",
+        "fasilitas": [
+          "Parkir",
+          "Toilet",
+          "Area Piknik",
+          "Warung"
+        ],
+        "kontak": "(085180673967)"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Alun-alun Kediri",
+      "slug": "alun-alun-kediri",
+      "category": "keluarga",
+      "image": "../images/destinations/alun-alun-kediri.jpg",
+      "rating": 4.3,
+      "reviews": 2156,
+      "description": "Pusat kota dengan taman yang indah, cocok untuk bersantai dan berolahraga.",
+      "price": "Gratis",
+      "priceCategory": "gratis",
+      "distance": "0.5 km",
+      "featured": false,
+      "tags": [
+        "Keluarga",
+        "Rekreasi",
+        "Gratis"
+      ],
+      "details": {
+        "alamat": "Jl. Mayor Bismo, Kota Kediri",
+        "jamOperasional": "24 Jam",
+        "fasilitas": [
+          "Taman",
+          "Area Bermain",
+          "Food Court",
+          "Toilet"
+        ],
+        "kontak": "0"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Museum airlangga",
+      "slug": "museum-airlangga",
+      "category": "sejarah",
+      "image": "../images/destinations/museum-airlangga.jpg",
+      "rating": 4.2,
+      "reviews": 543,
+      "description": "Museum yang menyimpan berbagai artefak dan peninggalan sejarah Kediri.",
+      "price": "Rp 1.000 - Rp 5.000",
+      "priceCategory": "murah",
+      "distance": "2 km",
+      "featured": false,
+      "tags": [
+        "Sejarah",
+        "Edukasi",
+        "Budaya"
+      ],
+      "details": {
+        "alamat": "Jl. Yos Sudarso No. 1, Kota Kediri",
+        "jamOperasional": "08:00 - 15:00 WIB",
+        "fasilitas": [
+          "Parkir",
+          "Toilet",
+          "Pemandu"
+        ],
+        "kontak": "(081359251997)"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Taman Sekartaji",
+      "slug": "taman-sekartaji",
+      "category": "keluarga",
+      "image": "../images/destinations/taman-sekartaji.jpg",
+      "rating": 4.4,
+      "reviews": 1234,
+      "description": "Taman kota yang asri dengan berbagai wahana permainan anak dan area bersantai.",
+      "price": "Gratis",
+      "priceCategory": "gratis",
+      "distance": "3 km",
+      "featured": false,
+      "tags": [
+        "Keluarga",
+        "Rekreasi",
+        "Gratis"
+      ],
+      "details": {
+        "alamat": "Jl. Dhoho, Kota Kediri",
+        "jamOperasional": "06:00 - 22:00 WIB",
+        "fasilitas": [
+          "Wahana Bermain",
+          "Taman",
+          "Food Court",
+          "Toilet"
+        ],
+        "kontak": "(082332593259)"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Masjid Agung Kediri",
+      "slug": "masjid-agung-kediri",
+      "category": "religi",
+      "image": "../images/destinations/masjid-agung-kediri.jpg",
+      "rating": 4.6,
+      "reviews": 876,
+      "description": "Masjid bersejarah dengan arsitektur yang megah dan lingkungan yang nyaman.",
+      "price": "Gratis",
+      "priceCategory": "gratis",
+      "distance": "1 km",
+      "featured": false,
+      "tags": [
+        "Religi",
+        "Sejarah",
+        "Arsitektur"
+      ],
+      "details": {
+        "alamat": "Jl. Panglima Sudirman, Kota Kediri",
+        "jamOperasional": "24 Jam",
+        "fasilitas": [
+          "Parkir",
+          "Mushola",
+          "Perpustakaan"
+        ],
+        "kontak": "(0878 5045 9515)"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Pemandian Tirtoyoso",
+      "slug": "pemandian-tirtoyoso",
+      "category": "alam",
+      "image": "../images/destinations/pemandian-tirtoyoso.jpg",
+      "rating": 4.1,
+      "reviews": 654,
+      "description": "Kolam renang alami dengan air yang sejuk dan pemandangan yang menenangkan.",
+      "price": "Rp 15.000 - Rp 20.000",
+      "priceCategory": "sedang",
+      "distance": "15 km",
+      "featured": false,
+      "tags": [
+        "Alam",
+        "Rekreasi",
+        "Kolam Renang"
+      ],
+      "details": {
+        "alamat": "Desa Tirtoyoso, Kecamatan Wates, Kabupaten Kediri",
+        "jamOperasional": "07:00 - 17:00 WIB",
+        "fasilitas": [
+          "Kolam Renang",
+          "Parkir",
+          "Toilet",
+          "Warung"
+        ],
+        "kontak": "0"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Goa Selomangleng",
+      "slug": "goa-selomangleng",
+      "category": "alam",
+      "image": "../images/destinations/goa-selomangleng.jpg",
+      "rating": 4.4,
+      "reviews": 723,
+      "description": "Goa dengan stalaktit dan stalagmit yang menakjubkan.",
+      "price": "Rp 1.000 - Rp 8.000",
+      "priceCategory": "murah",
+      "distance": "12 km",
+      "featured": false,
+      "tags": [
+        "Alam",
+        "Petualangan",
+        "Unik"
+      ],
+      "details": {
+        "alamat": "Desa Sanggrahan, Kecamatan Boyolangu, Kabupaten Kediri",
+        "jamOperasional": "08:00 - 16:00 WIB",
+        "fasilitas": [
+          "Parkir",
+          "Pemandu",
+          "Toilet"
+        ],
+        "kontak": "0"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Monumen Simpang Lima Gumul",
+      "slug": "monumen-simpang-lima-gumul",
+      "category": "sejarah",
+      "image": "../images/destinations/monumen-slg.jpg",
+      "rating": 4.7,
+      "reviews": 1892,
+      "description": "Monumen megah mirip Arc de Triomphe yang menjadi ikon Kediri.",
+      "price": "Gratis",
+      "priceCategory": "gratis",
+      "distance": "8 km",
+      "featured": false,
+      "tags": [
+        "Sejarah",
+        "Fotografi",
+        "Landmark"
+      ],
+      "details": {
+        "alamat": "Jl. Simpang Lima Gumul, Kabupaten Kediri",
+        "jamOperasional": "24 Jam",
+        "fasilitas": [
+          "Parkir",
+          "Area Foto",
+          "Food Court"
+        ],
+        "kontak": "(0354) 2891400"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "name": "Wisata Alam",
+      "icon": "mountains",
+      "count": 4,
+      "description": "Gunung, air terjun, dan pemandangan alam"
+    },
+    {
+      "name": "Wisata Sejarah",
+      "icon": "building",
+      "count": 3,
+      "description": "Candi, museum, dan situs bersejarah"
+    },
+    {
+      "name": "Wisata Keluarga",
+      "icon": "people",
+      "count": 2,
+      "description": "Taman rekreasi dan tempat bersantai"
+    },
+    {
+      "name": "Wisata Religi",
+      "icon": "house-heart",
+      "count": 1,
+      "description": "Masjid, gereja, dan tempat ibadah"
+    }
+  ],
+  "culinary": {
+    "highlights": [
+      {
+        "title": "Tahu Takwa",
+        "icon": "egg-fried",
+        "description": "Makanan khas Kediri yang sudah mendunia dengan rasa gurih dan tekstur kenyal",
+        "color": "primary"
+      },
+      {
+        "title": "Soto Kediri",
+        "icon": "cup-hot",
+        "description": "Soto ayam dengan kuah bening khas dan sambal yang menggugah selera",
+        "color": "success"
+      },
+      {
+        "title": "Gethuk Pisang",
+        "icon": "basket",
+        "description": "Jajanan tradisional dari pisang dengan rasa manis dan tekstur yang lembut",
+        "color": "info"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Makanan",
+        "value": "makanan",
+        "count": 45
+      },
+      {
+        "name": "Minuman",
+        "value": "minuman",
+        "count": 25
+      },
+      {
+        "name": "Jajanan",
+        "value": "jajanan",
+        "count": 20
+      },
+      {
+        "name": "Kue Tradisional",
+        "value": "kue",
+        "count": 10
+      }
+    ],
+    "priceRanges": [
+      {
+        "name": "Murah",
+        "value": "murah",
+        "range": "< Rp 10.000"
+      },
+      {
+        "name": "Sedang",
+        "value": "sedang",
+        "range": "Rp 10.000 - 30.000"
+      },
+      {
+        "name": "Tinggi",
+        "value": "tinggi",
+        "range": "> Rp 30.000"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "name": "Tahu Takwa",
+        "category": "makanan",
+        "image": "../images/kuliner/tahu-takwa.jpg",
+        "rating": 4.9,
+        "reviews": 3256,
+        "description": "Tahu khas Kediri dengan tekstur kenyal dan rasa gurih yang khas. Dibuat dengan proses khusus sehingga tahan lama.",
+        "price": "Rp 5.000 - 15.000",
+        "priceCategory": "murah",
+        "ingredients": [
+          "Kedelai pilihan",
+          "Bumbu rahasia",
+          "Minyak goreng",
+          "Garam",
+          "Bawang putih"
+        ],
+        "tags": [
+          "Legendary",
+          "Vegetarian",
+          "Street Food"
+        ],
+        "nutrition": {
+          "calories": "150 kcal",
+          "protein": "12g",
+          "carbs": "8g",
+          "fat": "9g"
+        },
+        "history": "Tahu Takwa merupakan makanan khas Kediri yang sudah ada sejak zaman kolonial. Dinamakan 'Takwa' karena proses pembuatannya yang membutuhkan ketekunan dan kesabaran seperti orang bertakwa.",
+        "stores": [
+          {
+            "name": "Tahu Takwa Legendaris",
+            "address": "Jl. Dhoho No. 45",
+            "distance": "0.8 km",
+            "rating": 4.8
+          },
+          {
+            "name": "Tahu Takwa Sumber Hidangan",
+            "address": "Jl. Veteran No. 12",
+            "distance": "1.2 km",
+            "rating": 4.6
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Soto Kediri",
+        "category": "makanan",
+        "image": "../images/kuliner/soto-kediri.jpg",
+        "rating": 4.7,
+        "reviews": 2890,
+        "description": "Soto ayam dengan kuah bening khas Kediri, disajikan dengan sambal dan pelengkap lainnya.",
+        "price": "Rp 12.000 - 25.000",
+        "priceCategory": "sedang",
+        "ingredients": [
+          "Ayam kampung",
+          "Bumbu soto",
+          "Soun",
+          "Tauge",
+          "Seledri",
+          "Bawang goreng"
+        ],
+        "tags": [
+          "Hangat",
+          "Berkuah",
+          "Comfort Food"
+        ],
+        "nutrition": {
+          "calories": "250 kcal",
+          "protein": "18g",
+          "carbs": "20g",
+          "fat": "12g"
+        },
+        "history": "Soto Kediri memiliki ciri khas kuah bening yang berbeda dengan soto daerah lain. Resepnya diwariskan turun-temurun sejak abad ke-19.",
+        "stores": [
+          {
+            "name": "Soto Ayam Lamongan Cak Har",
+            "address": "Jl. Mayor Bismo No. 12",
+            "distance": "0.8 km",
+            "rating": 4.6
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Gethuk Pisang",
+        "category": "jajanan",
+        "image": "../images/kuliner/gethuk-pisang.jpg",
+        "rating": 4.5,
+        "reviews": 1567,
+        "description": "Jajanan tradisional dari pisang yang dihaluskan dengan rasa manis alami dan tekstur lembut.",
+        "price": "Rp 3.000 - 8.000",
+        "priceCategory": "murah",
+        "ingredients": [
+          "Pisang matang",
+          "Gula merah",
+          "Tepung beras",
+          "Santan",
+          "Garam"
+        ],
+        "tags": [
+          "Manis",
+          "Tradisional",
+          "Snack"
+        ],
+        "nutrition": {
+          "calories": "120 kcal",
+          "protein": "2g",
+          "carbs": "28g",
+          "fat": "1g"
+        },
+        "history": "Gethuk Pisang merupakan jajanan tradisional yang sudah ada sejak zaman dahulu. Biasanya disajikan saat acara adat atau sebagai camilan sehari-hari.",
+        "stores": [
+          {
+            "name": "Warung Gethuk Mbok Darmi",
+            "address": "Jl. Yos Sudarso No. 8",
+            "distance": "2.1 km",
+            "rating": 4.5
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Stik Tahu",
+        "category": "jajanan",
+        "image": "../images/kuliner/stik-tahu.jpg",
+        "rating": 4.4,
+        "reviews": 1987,
+        "description": "Olahan tahu yang dibentuk stik dan digoreng crispy, cocok untuk camilan.",
+        "price": "Rp 8.000 - 15.000",
+        "priceCategory": "murah",
+        "ingredients": [
+          "Tahu putih",
+          "Tepung terigu",
+          "Tepung maizena",
+          "Bumbu balado",
+          "Minyak goreng"
+        ],
+        "tags": [
+          "Crispy",
+          "Camilan",
+          "Gurih"
+        ],
+        "nutrition": {
+          "calories": "180 kcal",
+          "protein": "10g",
+          "carbs": "15g",
+          "fat": "8g"
+        },
+        "history": "Stik Tahu merupakan inovasi kreatif dari pengusaha kuliner Kediri yang memanfaatkan tahu sebagai bahan utama camilan modern.",
+        "stores": [
+          {
+            "name": "Stik Tahu Crispy",
+            "address": "Jl. Veteran No. 56",
+            "distance": "1.4 km",
+            "rating": 4.3
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Sambal Tumpang",
+        "category": "makanan",
+        "image": "../images/kuliner/sambal-tumpang.jpg",
+        "rating": 4.6,
+        "reviews": 2341,
+        "description": "Sambal khas dari tempe bosok yang difermentasi, memiliki cita rasa yang unik dan nikmat.",
+        "price": "Rp 5.000 - 12.000",
+        "priceCategory": "murah",
+        "ingredients": [
+          "Tempe bosok",
+          "Cabe rawit",
+          "Bawang merah",
+          "Bawang putih",
+          "Kencur",
+          "Gula jawa"
+        ],
+        "tags": [
+          "Pedas",
+          "Tradisional",
+          "Unik"
+        ],
+        "nutrition": {
+          "calories": "80 kcal",
+          "protein": "6g",
+          "carbs": "10g",
+          "fat": "3g"
+        },
+        "history": "Sambal Tumpang merupakan warisan kuliner kuno dari Kediri yang menggunakan teknik fermentasi tempe untuk menghasilkan rasa yang khas.",
+        "stores": [
+          {
+            "name": "Warung Sambal Tumpang",
+            "address": "Jl. Dhoho No. 34",
+            "distance": "1.1 km",
+            "rating": 4.5
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Wedang Pokak",
+        "category": "minuman",
+        "image": "../images/kuliner/wedang-pokak.jpg",
+        "rating": 4.3,
+        "reviews": 987,
+        "description": "Minuman tradisional hangat dari rempah-rempah dengan rasa yang khas dan menyehatkan.",
+        "price": "Rp 5.000 - 10.000",
+        "priceCategory": "murah",
+        "ingredients": [
+          "Jahe merah",
+          "Serai",
+          "Gula jawa",
+          "Kayu manis",
+          "Cengkeh",
+          "Kapulaga"
+        ],
+        "tags": [
+          "Hangat",
+          "Sehat",
+          "Tradisional"
+        ],
+        "nutrition": {
+          "calories": "50 kcal",
+          "protein": "0g",
+          "carbs": "12g",
+          "fat": "0g"
+        },
+        "history": "Wedang Pokak merupakan minuman tradisional warisan leluhur yang dipercaya memiliki khasiat untuk kesehatan, terutama di musim hujan.",
+        "stores": [
+          {
+            "name": "Wedang Pokak Mbah Siti",
+            "address": "Jl. Yos Sudarso No. 12",
+            "distance": "2.3 km",
+            "rating": 4.4
+          }
+        ]
+      }
+    ],
+    "restaurants": [
+      {
+        "id": 1,
+        "name": "Tahu Takwa",
+        "specialty": "Tahu Takwa Original",
+        "image": "../images/kuliner/tahu-takwa-res.jpg",
+        "rating": 4.8,
+        "reviews": 1245,
+        "address": "Jl. Dhoho No. 45, Kediri",
+        "priceRange": "Rp 5.000 - 20.000",
+        "openHours": "08:00 - 21:00",
+        "distance": "1.2 km",
+        "link": "restaurant/tahu-takwa.html"
+      },
+      {
+        "id": 2,
+        "name": "Soto Ayam Lamongan Cak Har",
+        "specialty": "Soto Ayam Kediri",
+        "image": "../images/kuliner/soto-ayam-lamongan-cakhar.jpg",
+        "rating": 4.6,
+        "reviews": 987,
+        "address": "Jl. Mayor Bismo No. 12, Kediri",
+        "priceRange": "Rp 12.000 - 30.000",
+        "openHours": "06:00 - 22:00",
+        "distance": "0.8 km",
+        "link": "restaurant/soto-ayam-lamongan-cak-har.html"
+      },
+      {
+        "id": 3,
+        "name": "Warung Gethuk Mbok Darmi",
+        "specialty": "Gethuk Pisang",
+        "image": "../images/kuliner/warung-gethuk-mbok-darmi.jpg",
+        "rating": 4.5,
+        "reviews": 654,
+        "address": "Jl. Yos Sudarso No. 8, Kediri",
+        "priceRange": "Rp 3.000 - 15.000",
+        "openHours": "07:00 - 18:00",
+        "distance": "2.1 km",
+        "link": "restaurant/warung-gethuk-mbok-darmi.html"
+      }
+    ]
+  },
+  "culture": {
+    "highlights": [
+      {
+        "title": "Kesenian Tradisional",
+        "icon": "music-note-beamed",
+        "description": "Berbagai seni pertunjukan yang telah turun-temurun dilestarikan",
+        "color": "primary"
+      },
+      {
+        "title": "Kerajinan Tangan",
+        "icon": "brush",
+        "description": "Karya seni dan kerajinan khas yang menjadi ciri khas Kediri",
+        "color": "primary"
+      },
+      {
+        "title": "Upacara Adat",
+        "icon": "calendar-event",
+        "description": "Ritual dan upacara tradisional yang masih dilaksanakan",
+        "color": "primary"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Kesenian",
+        "value": "seni",
+        "count": 8,
+        "icon": "music-note-beamed"
+      },
+      {
+        "name": "Kerajinan",
+        "value": "kerajinan",
+        "count": 6,
+        "icon": "brush"
+      },
+      {
+        "name": "Upacara",
+        "value": "upacara",
+        "count": 5,
+        "icon": "calendar-event"
+      },
+      {
+        "name": "Kuliner Tradisional",
+        "value": "kuliner-tradisional",
+        "count": 4,
+        "icon": "egg-fried"
+      }
+    ],
+    "arts": [
+      {
+        "id": 1,
+        "name": "Tari Jaranan",
+        "category": "seni",
+        "image": "../images/budaya/tari-jaranan.jpg",
+        "rating": 4.8,
+        "reviews": 892,
+        "description": "Tari tradisional dengan properti kuda lumping yang penuh mistis dan energik. Menampilkan gerakan dinamis yang melambangkan keberanian dan kekuatan.",
+        "origin": "Kediri, Jawa Timur",
+        "performers": "Kelompok seni lokal",
+        "duration": "30-60 menit",
+        "significance": "Simbol perlawanan dan keberanian masyarakat Kediri",
+        "performances": ["Festival budaya", "Pernikahan", "Khitanan", "Bersih desa"],
+        "tags": ["Tradisional", "Energik", "Mistis"],
+        "history": "Tari Jaranan berasal dari tradisi perlawanan masyarakat Kediri melawan penjajah. Kuda lumping melambangkan pasukan berkuda yang gagah berani.",
+        "equipment": ["Kuda lumping", "Gamelan", "Kostum tradisional", "Sesaji"],
+        "venues": [
+          {
+            "name": "Sanggar Seni Jaranan Kediri",
+            "address": "Jl. Veteran No. 23",
+            "contact": "(0354) 334455"
+          },
+          {
+            "name": "Paguyuban Jaranan Nusantara",
+            "address": "Jl. Dhoho No. 67",
+            "contact": "(0354) 445566"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Wayang Kulit",
+        "category": "seni",
+        "image": "../images/budaya/wayang-kulit.jpg",
+        "rating": 4.9,
+        "reviews": 1245,
+        "description": "Seni pertunjukan bayangan dengan cerita Mahabharata dan Ramayana yang sarat filosofi kehidupan.",
+        "origin": "Jawa Timur",
+        "performers": "Dalang profesional",
+        "duration": "7-9 jam (semalam suntuk)",
+        "significance": "Media pendidikan moral dan spiritual",
+        "performances": ["Ruwatan", "Bersih desa", "Event khusus", "Pernikahan"],
+        "tags": ["Klasik", "Filosofis", "Sakral"],
+        "history": "Wayang kulit telah menjadi tradisi turun-temurun sejak era Kerajaan Majapahit. Setiap lakon mengandung pesan moral yang mendalam.",
+        "equipment": ["Wayang kulit", "Kelir (layar)", "Gamelan Jawa", "Blencong (lampu)"],
+        "venues": [
+          {
+            "name": "Dalang Ki Suparman",
+            "address": "Jl. Sukarno Hatta No. 45",
+            "contact": "(0354) 556677"
+          },
+          {
+            "name": "Sanggar Wayang Budaya",
+            "address": "Jl. Brawijaya No. 12",
+            "contact": "(0354) 667788"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Ludruk",
+        "category": "seni",
+        "image": "../images/budaya/ludruk.jpg",
+        "rating": 4.6,
+        "reviews": 678,
+        "description": "Teater tradisional Jawa Timur dengan dialog humor, kritik sosial, dan cerita rakyat yang menghibur.",
+        "origin": "Jawa Timur",
+        "performers": "Kelompok ludruk",
+        "duration": "2-3 jam",
+        "significance": "Hiburan rakyat dan media kritik sosial",
+        "performances": ["Pasar malam", "Festival", "Acara rakyat", "Kampanye"],
+        "tags": ["Humor", "Sosial", "Rakyat"],
+        "history": "Ludruk berkembang sebagai teater rakyat yang menyuarakan kehidupan masyarakat kecil dengan cara yang menghibur namun penuh makna.",
+        "equipment": ["Kostum tradisional", "Gamelan", "Properti panggung", "Sound system"],
+        "venues": [
+          {
+            "name": "Kelompok Ludruk Warna Sari",
+            "address": "Jl. Patimura No. 34",
+            "contact": "(0354) 778899"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Reog Ponorogo",
+        "category": "seni",
+        "image": "../images/budaya/reog-ponorogo.jpg",
+        "rating": 4.7,
+        "reviews": 543,
+        "description": "Tari tradisional dengan topeng dadak merak yang megah dan berat, menampilkan kekuatan dan ketangkasan penari.",
+        "origin": "Ponorogo (populer di Kediri)",
+        "performers": "Kelompok reog",
+        "duration": "45-90 menit",
+        "significance": "Simbol kekuatan dan keberanian",
+        "performances": ["Festival", "HUT Kemerdekaan", "Event besar", "Penyambutan tamu"],
+        "tags": ["Megah", "Kuat", "Spektakuler"],
+        "history": "Reog Ponorogo merupakan kesenian yang melambangkan perjuangan Raja Kelono Sewandono dalam mempersunting Putri Songgo Langit.",
+        "equipment": ["Dadak merak", "Kostum barongan", "Gamelan", "Properti"],
+        "venues": [
+          {
+            "name": "Paguyuban Reog Kediri",
+            "address": "Jl. Ahmad Yani No. 56",
+            "contact": "(0354) 889900"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Karawitan",
+        "category": "seni",
+        "image": "../images/budaya/karawitan.jpg",
+        "rating": 4.5,
+        "reviews": 432,
+        "description": "Seni musik tradisional Jawa menggunakan gamelan dengan harmoni yang khas dan menenangkan.",
+        "origin": "Jawa Timur",
+        "performers": "Kelompok karawitan",
+        "duration": "1-2 jam",
+        "significance": "Pelestarian musik tradisional Jawa",
+        "performances": ["Acara adat", "Pernikahan", "Festival", "Pertunjukan budaya"],
+        "tags": ["Harmonis", "Tradisional", "Menenangkan"],
+        "history": "Karawitan telah menjadi bagian integral dari upacara adat dan perayaan masyarakat Jawa sejak ratusan tahun lalu.",
+        "equipment": ["Gamelan lengkap", "Kendang", "Saron", "Bonang"],
+        "venues": [
+          {
+            "name": "Sanggar Karawitan Laras Sari",
+            "address": "Jl. Sudirman No. 78",
+            "contact": "(0354) 990011"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Tari Topeng Malangan",
+        "category": "seni",
+        "image": "../images/budaya/tari-topeng.jpg",
+        "rating": 4.6,
+        "reviews": 387,
+        "description": "Tarian dengan topeng khas yang menceritakan kisah Panji dengan gerakan luwes dan ekspresif.",
+        "origin": "Malang (populer di Kediri)",
+        "performers": "Penari topeng",
+        "duration": "20-40 menit",
+        "significance": "Pelestarian cerita Panji",
+        "performances": ["Festival seni", "Acara budaya", "Pernikahan adat"],
+        "tags": ["Ekspresif", "Artistik", "Klasik"],
+        "history": "Tari Topeng Malangan mengisahkan perjalanan Raden Panji Asmarabangun dalam mencari kekasihnya, Dewi Sekartaji.",
+        "equipment": ["Topeng khas", "Kostum tradisional", "Gamelan Jawa"],
+        "venues": [
+          {
+            "name": "Sanggar Tari Topeng Kediri",
+            "address": "Jl. Kartini No. 23",
+            "contact": "(0354) 112233"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Tayub",
+        "category": "seni",
+        "image": "../images/budaya/tayub.jpg",
+        "rating": 4.3,
+        "reviews": 298,
+        "description": "Tarian pergaulan tradisional dengan iringan gamelan yang mengajak penonton untuk berinteraksi.",
+        "origin": "Jawa Timur",
+        "performers": "Penari tayub (tandhak)",
+        "duration": "2-4 jam",
+        "significance": "Hiburan rakyat dan media sosialisasi",
+        "performances": ["Hajatan", "Bersih desa", "Syukuran", "Pesta rakyat"],
+        "tags": ["Interaktif", "Sosial", "Meriah"],
+        "history": "Tayub merupakan seni pertunjukan yang mempertemukan penari dengan penonton dalam suasana kegembiraan dan kebersamaan.",
+        "equipment": ["Kostum tayub", "Gamelan", "Selendang"],
+        "venues": [
+          {
+            "name": "Kelompok Tayub Sekar Arum",
+            "address": "Jl. Pahlawan No. 45",
+            "contact": "(0354) 223344"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Kentrung",
+        "category": "seni",
+        "image": "../images/budaya/kentrung.jpg",
+        "rating": 4.4,
+        "reviews": 267,
+        "description": "Seni tutur dengan iringan musik sederhana, menceritakan kisah-kisah pahlawan dan legenda Jawa.",
+        "origin": "Jawa Timur",
+        "performers": "Juru kentrung",
+        "duration": "1-3 jam",
+        "significance": "Media penyebaran cerita dan nilai moral",
+        "performances": ["Acara rakyat", "Pengajian", "Festival", "Pertunjukan jalanan"],
+        "tags": ["Naratif", "Sederhana", "Edukatif"],
+        "history": "Kentrung berkembang sebagai media hiburan sekaligus penyebaran cerita kepahlawanan dan nilai-nilai luhur kepada masyarakat.",
+        "equipment": ["Kentrung (alat musik)", "Terbang", "Cerita tertulis"],
+        "venues": [
+          {
+            "name": "Pak Karno - Juru Kentrung",
+            "address": "Jl. Diponegoro No. 12",
+            "contact": "(0354) 334455"
+          }
+        ]
+      }
+    ],
+    "handicrafts": [
+      {
+        "id": 1,
+        "name": "Batik Kediri",
+        "category": "kerajinan",
+        "image": "../images/budaya/batik-kediri.jpg",
+        "rating": 4.8,
+        "reviews": 1543,
+        "description": "Batik dengan motif khas yang terinspirasi dari alam dan sejarah Kediri, dibuat dengan teknik tulis dan cap tradisional.",
+        "materials": ["Kain katun", "Kain sutra", "Malam (lilin)", "Pewarna alami", "Pewarna sintetis"],
+        "process": "Tulis dan cap",
+        "motifs": ["Gunung Kelud", "Tahu Takwa", "Candi Surowono", "Sekartaji", "Parang Kediri"],
+        "priceRange": "Rp 150.000 - 2.500.000",
+        "artisans": "Pengrajin batik lokal",
+        "tags": ["Eksklusif", "Handmade", "Tradisional"],
+        "history": "Batik Kediri berkembang sejak era Kerajaan Kediri dengan motif yang mencerminkan kearifan lokal dan keindahan alam setempat.",
+        "techniques": ["Batik tulis", "Batik cap", "Batik kombinasi"],
+        "workshops": [
+          {
+            "name": "Batik Griya Kediri",
+            "address": "Jl. Brawijaya No. 34",
+            "contact": "(0354) 445566",
+            "openHours": "08:00 - 17:00 WIB"
+          },
+          {
+            "name": "Batik Pusaka Nusantara",
+            "address": "Jl. Veteran No. 67",
+            "contact": "(0354) 556677",
+            "openHours": "09:00 - 18:00 WIB"
+          },
+          {
+            "name": "Sanggar Batik Kartini",
+            "address": "Jl. Kartini No. 12",
+            "contact": "(0354) 667788",
+            "openHours": "08:00 - 16:00 WIB"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Kerajinan Tembaga",
+        "category": "kerajinan",
+        "image": "../images/budaya/kerajinan-tembaga.jpg",
+        "rating": 4.6,
+        "reviews": 876,
+        "description": "Kerajinan logam tembaga dan kuningan dengan teknik tempa tradisional menghasilkan produk berkualitas tinggi.",
+        "materials": ["Tembaga murni", "Kuningan", "Perunggu"],
+        "process": "Tempa, ukir, dan poles",
+        "products": ["Patung", "Vas bunga", "Lampu hias", "Relief", "Miniatur", "Peralatan ibadah"],
+        "priceRange": "Rp 75.000 - 5.000.000",
+        "artisans": "Pengrajin tembaga berpengalaman",
+        "tags": ["Artistik", "Tahan lama", "Unik"],
+        "history": "Kerajinan tembaga Kediri diwariskan turun-temurun, menghasilkan karya seni yang menggabungkan keindahan dan fungsi.",
+        "techniques": ["Tempa manual", "Ukir tangan", "Poles kilap"],
+        "workshops": [
+          {
+            "name": "Tembaga Art Kediri",
+            "address": "Jl. Industri No. 45",
+            "contact": "(0354) 778899",
+            "openHours": "07:00 - 16:00 WIB"
+          },
+          {
+            "name": "Karya Tembaga Jaya",
+            "address": "Jl. Hasanudin No. 23",
+            "contact": "(0354) 889900",
+            "openHours": "08:00 - 17:00 WIB"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Anyaman Bambu",
+        "category": "kerajinan",
+        "image": "../images/budaya/anyaman-bambu.jpg",
+        "rating": 4.5,
+        "reviews": 654,
+        "description": "Kerajinan anyaman dari bambu dengan pola tradisional yang ramah lingkungan dan multifungsi.",
+        "materials": ["Bambu petung", "Bambu apus", "Rotan", "Pewarna alami"],
+        "process": "Anyaman tradisional dengan pola geometris",
+        "products": ["Tikar", "Keranjang", "Furniture", "Hiasan dinding", "Tas", "Tudung saji"],
+        "priceRange": "Rp 25.000 - 750.000",
+        "artisans": "Pengrajin anyaman desa",
+        "tags": ["Eco-friendly", "Tradisional", "Fungsional"],
+        "history": "Anyaman bambu telah menjadi bagian kehidupan masyarakat Kediri sejak zaman dahulu sebagai kebutuhan sehari-hari.",
+        "techniques": ["Anyaman kepang", "Anyaman bilik", "Anyaman sasak"],
+        "workshops": [
+          {
+            "name": "Anyaman Bambu Sari",
+            "address": "Desa Tamanan, Kediri",
+            "contact": "(0354) 990011",
+            "openHours": "07:00 - 15:00 WIB"
+          },
+          {
+            "name": "Kerajinan Bambu Makmur",
+            "address": "Desa Kampung Dalem",
+            "contact": "(0354) 101112",
+            "openHours": "08:00 - 16:00 WIB"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Ukiran Kayu",
+        "category": "kerajinan",
+        "image": "../images/budaya/ukiran-kayu.jpg",
+        "rating": 4.7,
+        "reviews": 543,
+        "description": "Seni ukir kayu dengan motif tradisional Jawa yang detail dan artistik untuk dekorasi dan furniture.",
+        "materials": ["Kayu jati", "Kayu mahoni", "Kayu sungkai", "Kayu sono"],
+        "process": "Ukir tangan dengan pahat tradisional",
+        "products": ["Panel ukir", "Furniture", "Hiasan dinding", "Miniatur", "Kerajinan tangan"],
+        "priceRange": "Rp 100.000 - 10.000.000",
+        "artisans": "Pengukir kayu profesional",
+        "tags": ["Detail", "Berkelas", "Tradisional"],
+        "history": "Ukiran kayu Kediri memadukan motif klasik Jawa dengan sentuhan modern, menciptakan karya seni bernilai tinggi.",
+        "techniques": ["Ukir timbul", "Ukir tembus", "Ukir tenggelam"],
+        "workshops": [
+          {
+            "name": "Ukir Kayu Jepara Kediri",
+            "address": "Jl. Industri No. 78",
+            "contact": "(0354) 121314",
+            "openHours": "08:00 - 17:00 WIB"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Keramik Tradisional",
+        "category": "kerajinan",
+        "image": "../images/budaya/keramik-tradisional.jpg",
+        "rating": 4.4,
+        "reviews": 432,
+        "description": "Keramik dengan teknik pembuatan tradisional menghasilkan produk unik untuk dekorasi dan kebutuhan rumah tangga.",
+        "materials": ["Tanah liat", "Glasir", "Pewarna keramik"],
+        "process": "Putar, bentuk, bakar, dan glasir",
+        "products": ["Vas", "Piring hias", "Guci", "Pot tanaman", "Patung kecil"],
+        "priceRange": "Rp 30.000 - 500.000",
+        "artisans": "Pengrajin keramik",
+        "tags": ["Artistik", "Unik", "Handmade"],
+        "history": "Kerajinan keramik berkembang mengikuti tradisi pembuatan gerabah yang telah ada sejak masa lampau.",
+        "techniques": ["Teknik putar", "Teknik cetak", "Teknik pijit"],
+        "workshops": [
+          {
+            "name": "Keramik Nusa Dua",
+            "address": "Jl. Raya Pare No. 34",
+            "contact": "(0354) 141516",
+            "openHours": "08:00 - 16:00 WIB"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Tenun Ikat",
+        "category": "kerajinan",
+        "image": "../images/budaya/tenun-ikat.jpg",
+        "rating": 4.6,
+        "reviews": 389,
+        "description": "Kain tenun ikat dengan motif tradisional yang dibuat menggunakan alat tenun bukan mesin (ATBM).",
+        "materials": ["Benang katun", "Benang sutra", "Pewarna alami"],
+        "process": "Tenun ikat tradisional ATBM",
+        "products": ["Kain tenun", "Selendang", "Sarung", "Aksesoris"],
+        "priceRange": "Rp 200.000 - 3.000.000",
+        "artisans": "Penenun tradisional",
+        "tags": ["Eksklusif", "Handwoven", "Premium"],
+        "history": "Tenun ikat Kediri menggabungkan teknik pewarnaan benang sebelum ditenun untuk menghasilkan motif yang indah.",
+        "techniques": ["Ikat pakan", "Ikat lungsi", "Ikat ganda"],
+        "workshops": [
+          {
+            "name": "Tenun Ikat Nusantara",
+            "address": "Jl. Brawijaya No. 90",
+            "contact": "(0354) 161718",
+            "openHours": "09:00 - 17:00 WIB"
+          }
+        ]
+      }
+    ],
+    "ceremonies": [
+      {
+        "id": 1,
+        "name": "Bersih Desa",
+        "category": "upacara",
+        "image": "../images/budaya/bersih-desa.jpg",
+        "rating": 4.7,
+        "reviews": 678,
+        "description": "Upacara tradisional untuk membersihkan desa dari bala dan marabahaya, dilakukan dengan penuh khidmat.",
+        "timing": "Setahun sekali (biasanya setelah panen)",
+        "location": "Desa-desa di Kediri",
+        "participants": "Seluruh warga desa",
+        "rituals": ["Kirab budaya", "Sesaji di tempat keramat", "Doa bersama", "Wayang kulit", "Kenduri"],
+        "significance": "Ungkapan syukur dan tolak bala",
+        "tags": ["Sakral", "Komunal", "Tradisional"],
+        "history": "Bersih Desa telah dilakukan sejak ratusan tahun lalu sebagai wujud rasa syukur masyarakat agraris atas hasil panen.",
+        "preparations": [
+          "Gotong royong bersih-bersih desa",
+          "Pembuatan sesaji",
+          "Persiapan panggung wayang",
+          "Masak makanan untuk kenduri"
+        ],
+        "offerings": ["Tumpeng", "Jajan pasar", "Bunga", "Kemenyan", "Air suci"],
+        "schedule": [
+          {
+            "time": "07:00",
+            "activity": "Kerja bakti bersih desa"
+          },
+          {
+            "time": "14:00",
+            "activity": "Kirab sesaji"
+          },
+          {
+            "time": "16:00",
+            "activity": "Doa bersama"
+          },
+          {
+            "time": "19:00",
+            "activity": "Wayang kulit"
+          },
+          {
+            "time": "21:00",
+            "activity": "Kenduri bersama"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Grebeg Sudiro",
+        "category": "upacara",
+        "image": "../images/budaya/grebeg-sudiro.jpg",
+        "rating": 4.8,
+        "reviews": 892,
+        "description": "Festival budaya yang memadukan tradisi Jawa, Tionghoa, dan Islam dalam suasana toleransi dan kebersamaan.",
+        "timing": "Tahun Baru Imlek",
+        "location": "Kampung Tionghoa Kediri",
+        "participants": "Masyarakat multietnis",
+        "rituals": ["Kirab budaya", "Barongsai", "Pembagian gunungan", "Pertunjukan seni", "Doa bersama"],
+        "significance": "Simbol kerukunan antarumat beragama",
+        "tags": ["Multikultural", "Meriah", "Toleransi"],
+        "history": "Grebeg Sudiro lahir dari semangat kebersamaan masyarakat Kediri yang multikultur dalam merayakan keberagaman.",
+        "preparations": [
+          "Pembuatan gunungan",
+          "Latihan barongsai",
+          "Dekorasi kampung",
+          "Koordinasi dengan tokoh masyarakat"
+        ],
+        "offerings": ["Gunungan berisi hasil bumi", "Kue-kue tradisional", "Buah-buahan"],
+        "schedule": [
+          {
+            "time": "08:00",
+            "activity": "Persiapan dan dekorasi"
+          },
+          {
+            "time": "10:00",
+            "activity": "Pembukaan dan sambutan"
+          },
+          {
+            "time": "11:00",
+            "activity": "Kirab budaya"
+          },
+          {
+            "time": "13:00",
+            "activity": "Pertunjukan barongsai"
+          },
+          {
+            "time": "15:00",
+            "activity": "Pembagian gunungan"
+          },
+          {
+            "time": "17:00",
+            "activity": "Pertunjukan seni"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Sedekah Bumi",
+        "category": "upacara",
+        "image": "../images/budaya/sedekah-bumi.jpg",
+        "rating": 4.6,
+        "reviews": 543,
+        "description": "Upacara syukur atas hasil bumi dan kesuburan tanah, dilakukan oleh masyarakat petani dengan penuh rasa syukur.",
+        "timing": "Setelah panen raya",
+        "location": "Ladang dan sawah",
+        "participants": "Petani dan warga sekitar",
+        "rituals": ["Sesaji di sawah", "Kenduri", "Wayang orang", "Tari-tarian", "Doa syukur"],
+        "significance": "Rasa syukur petani atas hasil panen yang melimpah",
+        "tags": ["Agraris", "Syukuran", "Tradisional"],
+        "history": "Sedekah Bumi merupakan tradisi agraris yang telah dilakukan sejak masa kerajaan sebagai bentuk penghormatan kepada Dewi Sri.",
+        "preparations": [
+          "Pembuatan sesaji hasil bumi",
+          "Persiapan panggung wayang",
+          "Memasak makanan tradisional",
+          "Undangan ke warga"
+        ],
+        "offerings": ["Tumpeng robyong", "Hasil panen", "Jajanan pasar", "Bunga", "Kemenyan"],
+        "schedule": [
+          {
+            "time": "06:00",
+            "activity": "Persiapan sesaji"
+          },
+          {
+            "time": "09:00",
+            "activity": "Peletakan sesaji di sawah"
+          },
+          {
+            "time": "11:00",
+            "activity": "Doa bersama"
+          },
+          {
+            "time": "12:00",
+            "activity": "Kenduri makan bersama"
+          },
+          {
+            "time": "19:00",
+            "activity": "Wayang orang"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Nyadran",
+        "category": "upacara",
+        "image": "../images/budaya/nyadran.jpg",
+        "rating": 4.5,
+        "reviews": 456,
+        "description": "Tradisi ziarah ke makam leluhur untuk mendoakan dan membersihkan area pemakaman, dilakukan menjelang Ramadhan.",
+        "timing": "Menjelang bulan Ramadhan (Ruwah/Syaban)",
+        "location": "Pemakaman umum dan keramat",
+        "participants": "Keluarga besar dan warga",
+        "rituals": ["Bersih makam", "Tahlilan", "Pembacaan doa", "Kirab", "Sedekah makanan"],
+        "significance": "Menghormati leluhur dan menjalin silaturahmi",
+        "tags": ["Spiritual", "Kekeluargaan", "Tradisional"],
+        "history": "Nyadran adalah tradisi yang memadukan kepercayaan animisme dengan ajaran Islam dalam menghormati leluhur.",
+        "preparations": [
+          "Pembersihan makam",
+          "Pembuatan nasi tumpeng",
+          "Pembelian bunga",
+          "Koordinasi keluarga besar"
+        ],
+        "offerings": ["Bunga tabur", "Air suci", "Kemenyan", "Makanan"],
+        "schedule": [
+          {
+            "time": "07:00",
+            "activity": "Berkumpul di makam"
+          },
+          {
+            "time": "08:00",
+            "activity": "Bersih-bersih makam"
+          },
+          {
+            "time": "10:00",
+            "activity": "Tahlilan dan doa"
+          },
+          {
+            "time": "12:00",
+            "activity": "Makan bersama"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Ruwatan",
+        "category": "upacara",
+        "image": "../images/budaya/ruwatan.jpg",
+        "rating": 4.7,
+        "reviews": 389,
+        "description": "Upacara pembersihan spiritual bagi anak-anak yang dianggap memiliki nasib buruk menurut kepercayaan Jawa.",
+        "timing": "Sesuai kebutuhan keluarga",
+        "location": "Rumah atau gedung pertunjukan",
+        "participants": "Keluarga yang meruwat dan tamu undangan",
+        "rituals": ["Wayang kulit semalam suntuk", "Sesaji lengkap", "Doa khusus", "Mandikan anak"],
+        "significance": "Membebaskan anak dari nasib buruk (sukerta)",
+        "tags": ["Sakral", "Spiritual", "Keluarga"],
+        "history": "Ruwatan merupakan tradisi kuno untuk melindungi anak-anak tertentu dari malapetaka menurut primbon Jawa.",
+        "preparations": [
+          "Konsultasi dengan dalang",
+          "Pembuatan sesaji lengkap",
+          "Persiapan panggung wayang",
+          "Undangan tamu"
+        ],
+        "offerings": ["Sesaji lengkap 7 rupa", "Ayam kampung", "Kelapa", "Pisang raja", "Jajan pasar"],
+        "schedule": [
+          {
+            "time": "19:00",
+            "activity": "Pembukaan"
+          },
+          {
+            "time": "20:00",
+            "activity": "Dimulainya wayang"
+          },
+          {
+            "time": "24:00",
+            "activity": "Puncak ruwatan"
+          },
+          {
+            "time": "04:00",
+            "activity": "Penutupan wayang"
+          }
+        ]
+      }
+    ],
+    "traditions": [
+      {
+        "id": 1,
+        "name": "Mitoni (Tingkeban)",
+        "category": "upacara",
+        "description": "Upacara kehamilan 7 bulan untuk mendoakan ibu dan calon bayi",
+        "significance": "Keselamatan ibu dan bayi"
+      },
+      {
+        "id": 2,
+        "name": "Tedhak Siten",
+        "category": "upacara",
+        "description": "Upacara turun tanah pertama kali untuk bayi usia 7-8 bulan",
+        "significance": "Harapan anak tumbuh kuat dan mandiri"
+      },
+      {
+        "id": 3,
+        "name": "Sepasaran",
+        "category": "upacara",
+        "description": "Selamatan pada hari ke-5 kelahiran bayi",
+        "significance": "Syukur atas kelahiran"
+      }
+    ],
+    "culturalVenues": [
+      {
+        "id": 1,
+        "name": "Museum Linggamarta",
+        "type": "Museum",
+        "address": "Jl. Yos Sudarso No. 1, Kota Kediri",
+        "description": "Museum yang menyimpan koleksi artefak dan benda bersejarah Kediri",
+        "openHours": "08:00 - 15:00 WIB",
+        "ticketPrice": "Rp 5.000",
+        "contact": "(0354) 567890",
+        "facilities": ["Parkir", "Toilet", "Pemandu", "Toko souvenir"],
+        "collections": ["Artefak era Majapahit", "Benda-benda kerajaan", "Foto-foto bersejarah", "Koleksi batik"]
+      },
+      {
+        "id": 2,
+        "name": "Pendopo Kota Kediri",
+        "type": "Venue Budaya",
+        "address": "Jl. Mayor Bismo No. 1, Kota Kediri",
+        "description": "Tempat penyelenggaraan acara budaya dan pertunjukan seni",
+        "openHours": "Sesuai event",
+        "ticketPrice": "Bervariasi",
+        "contact": "(0354) 123456",
+        "facilities": ["Panggung besar", "Sound system", "Parkir luas", "Toilet"],
+        "events": ["Pertunjukan wayang", "Festival budaya", "Pameran seni", "Upacara adat"]
+      },
+      {
+        "id": 3,
+        "name": "Sanggar Seni Roro Mendut",
+        "type": "Sanggar Seni",
+        "address": "Jl. Brawijaya No. 45, Kediri",
+        "description": "Pusat pelatihan seni tari dan karawitan tradisional",
+        "openHours": "15:00 - 20:00 WIB",
+        "ticketPrice": "Gratis (untuk kelas ada biaya)",
+        "contact": "(0354) 334455",
+        "facilities": ["Studio tari", "Ruang gamelan", "Ruang ganti", "Perpustakaan"],
+        "programs": ["Kelas tari anak", "Kelas karawitan", "Workshop batik", "Latihan wayang"]
+      }
+    ],
+    "culturalEvents": [
+      {
+        "id": 1,
+        "name": "Festival Jaranan Kediri",
+        "date": "15 Agustus 2024",
+        "time": "19:00 - 23:00 WIB",
+        "location": "Alun-alun Kediri",
+        "type": "Pertunjukan",
+        "category": "seni",
+        "description": "Festival tahunan menampilkan berbagai kelompok tari jaranan dari seluruh Kediri dan sekitarnya",
+        "participants": "15+ grup jaranan",
+        "ticketPrice": "Gratis",
+        "contact": "(0354) 123456",
+        "highlights": ["Kompetisi jaranan", "Penampilan terbaik", "Jaranan kolosal", "Pameran properti"]
+      },
+      {
+        "id": 2,
+        "name": "Pameran Batik Nusantara",
+        "date": "22-25 Agustus 2024",
+        "time": "09:00 - 21:00 WIB",
+        "location": "Museum Linggamarta",
+        "type": "Pameran",
+        "category": "kerajinan",
+        "description": "Pameran batik dari berbagai daerah dengan fokus pada batik khas Kediri",
+        "participants": "30+ pengrajin batik",
+        "ticketPrice": "Rp 10.000",
+        "contact": "(0354) 567890",
+        "highlights": ["Batik kontemporer", "Workshop membatik", "Fashion show", "Bazaar batik"]
+      },
+      {
+        "id": 3,
+        "name": "Wayang Kulit Semalam Suntuk",
+        "date": "30 Agustus 2024",
+        "time": "20:00 - 04:00 WIB",
+        "location": "Taman Sekartaji",
+        "type": "Pertunjukan",
+        "category": "seni",
+        "description": "Pertunjukan wayang kulit semalam suntuk dengan dalang terkenal Ki Supardi Aryo",
+        "participants": "Ki Supardi Aryo dan kelompok",
+        "ticketPrice": "Gratis",
+        "contact": "(0354) 678901",
+        "highlights": ["Lakon Arjuna Wiwaha", "Gamelan lengkap", "Tata lampu modern", "Kuliner malam"]
+      },
+      {
+        "id": 4,
+        "name": "Festival Grebeg Sudiro",
+        "date": "10 Februari 2025",
+        "time": "08:00 - 18:00 WIB",
+        "location": "Kampung Sudiro, Kediri",
+        "type": "Festival",
+        "category": "upacara",
+        "description": "Festival budaya multikultur menyambut Tahun Baru Imlek",
+        "participants": "Masyarakat multietnis Kediri",
+        "ticketPrice": "Gratis",
+        "contact": "(0354) 445566",
+        "highlights": ["Kirab budaya", "Barongsai raksasa", "Pembagian gunungan", "Bazar kuliner"]
+      },
+      {
+        "id": 5,
+        "name": "Lomba Karawitan Se-Jawa Timur",
+        "date": "5 September 2024",
+        "time": "08:00 - 17:00 WIB",
+        "location": "Pendopo Kota Kediri",
+        "type": "Kompetisi",
+        "category": "seni",
+        "description": "Lomba karawitan tingkat provinsi dengan peserta dari berbagai kota",
+        "participants": "25+ grup karawitan",
+        "ticketPrice": "Rp 15.000",
+        "contact": "(0354) 123456",
+        "highlights": ["Kategori anak-anak", "Kategori dewasa", "Penampilan tamu", "Workshop gamelan"]
+      },
+      {
+        "id": 6,
+        "name": "Pasar Seni dan Kerajinan",
+        "date": "Setiap akhir pekan",
+        "time": "16:00 - 22:00 WIB",
+        "location": "Alun-alun Kediri",
+        "type": "Bazaar",
+        "category": "kerajinan",
+        "description": "Pasar seni mingguan menampilkan berbagai kerajinan tangan lokal",
+        "participants": "50+ pengrajin",
+        "ticketPrice": "Gratis",
+        "contact": "(0354) 789012",
+        "highlights": ["Kerajinan tangan", "Batik", "Anyaman", "Live music", "Street food"]
+      }
+    ],
+    "museums": [
+      {
+        "name": "Museum Linggamarta",
+        "description": "Museum utama di Kediri dengan koleksi lengkap",
+        "collections": 500
+      },
+      {
+        "name": "Museum Fotografi Kediri",
+        "description": "Dokumentasi sejarah melalui foto",
+        "collections": 200
+      }
+    ],
+    "galleries": [
+      {
+        "name": "Galeri Seni Rupa Kediri",
+        "address": "Jl. Brawijaya No. 56",
+        "specialization": "Lukisan dan patung kontemporer"
+      },
+      {
+        "name": "Galeri Batik Nusantara",
+        "address": "Jl. Veteran No. 89",
+        "specialization": "Batik tradisional dan modern"
+      }
+    ]
+  },
+  "events": [
+    {
+      "title": "Festival Tahu Takwa",
+      "date": "15 Des 2024",
+      "location": "Alun-alun Kediri",
+      "category": "Kuliner"
+    },
+    {
+      "title": "Pertunjukan Tari Jaranan",
+      "date": "20 Des 2024",
+      "location": "Taman Sekartaji",
+      "category": "Budaya"
+    },
+    {
+      "title": "Expo Batik Kediri",
+      "date": "25 Des 2024",
+      "location": "Pendopo Kota",
+      "category": "Kerajinan"
+    }
+  ],
+  "weather": {
+    "temperature": "28°C",
+    "condition": "Cerah Berawan",
+    "humidity": "65%",
+    "wind": "12 km/jam"
+  }
+}

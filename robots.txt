@@ -1,0 +1,71 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://transkediri.top/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Blok AI training
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: CCBot
+Disallow: /
+
+# Blok scraping bots
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+
+# Allow image indexing
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Crawl delay
+Crawl-delay: 1
+
+# Allowed assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Block tracking parameters
+Disallow: /*?utm_
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?msclkid=
+
+# Social media bots allowed
+User-agent: FacebookExternalHit
+Allow: /
+User-agent: Twitterbot
+Allow: /
+User-agent: LinkedInBot
+Allow: /
+
+# Disallow dev folders
+Disallow: /dev/
+Disallow: /test/
+Disallow: /backup/
+Disallow: /node_modules/
+Disallow: /vendor/

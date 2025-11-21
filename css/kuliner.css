@@ -1,0 +1,802 @@
+/* Kuliner Page Specific Styles */
+:root {
+    --primary: #2c786c;
+    --primary-dark: #1a4d44;
+    --primary-light: #3d9d8f;
+    --secondary: #2c786c; /* Changed from orange to green */
+    --secondary-dark: #1a4d44; /* Changed from orange to green */
+    --accent: #004445;
+    --success: #10b981;
+    --danger: #ef4444;
+    --light: #f8fafc;
+    --dark: #1e293b;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-bs-theme="dark"] {
+    --light: #1e293b;
+    --dark: #f8fafc;
+    --gray-50: #0f172a;
+    --gray-100: #1e293b;
+    --gray-200: #334155;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner-ring {
+    width: 80px;
+    height: 80px;
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-screen p {
+    color: white;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    padding: 6rem 0 4rem;
+    margin-top: 76px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 50%);
+}
+
+.breadcrumb {
+    background: transparent;
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb-item a:hover {
+    color: white;
+}
+
+.breadcrumb-item.active {
+    color: white;
+}
+
+.header-stats {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-stats h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+}
+
+.header-stats small {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Culinary Highlights */
+.culinary-highlight-card {
+    transition: var(--transition);
+    cursor: pointer;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    box-shadow: var(--shadow-lg);
+}
+
+.culinary-highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.05));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.culinary-highlight-card:hover::before {
+    opacity: 1;
+}
+
+.culinary-highlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Filter Section */
+.filter-section {
+    background: var(--gray-50);
+    padding: 1.5rem 0;
+    box-shadow: var(--shadow);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+[data-bs-theme="dark"] .filter-section {
+    background: var(--gray-800);
+    border-color: var(--gray-700);
+}
+
+.form-select,
+.form-control {
+    border-radius: 0.75rem;
+    border: 1px solid var(--gray-200);
+    padding: 0.75rem 1rem;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(44, 120, 108, 0.1);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+    background: white;
+}
+
+[data-bs-theme="dark"] .card {
+    background: var(--gray-800);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 66.67%;
+}
+
+.card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.culinary-card .card-img-top {
+    height: 200px;
+}
+
+.restaurant-card .card-img-top {
+    height: 180px;
+}
+
+.card-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.375rem 0.875rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary);
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-rating {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 0.375rem 0.875rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.rating i {
+    color: #fbbf24;
+}
+
+.culinary-meta {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-100);
+    margin-top: 1rem;
+}
+
+[data-bs-theme="dark"] .culinary-meta {
+    border-color: var(--gray-700);
+}
+
+.tags .badge {
+    padding: 0.375rem 0.75rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    background: var(--gray-100);
+    color: var(--gray-700);
+}
+
+[data-bs-theme="dark"] .tags .badge {
+    background: var(--gray-700);
+    color: var(--gray-300);
+}
+
+.nutrition-info {
+    background: var(--gray-50);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    border-left: 3px solid var(--primary);
+}
+
+[data-bs-theme="dark"] .nutrition-info {
+    background: var(--gray-700);
+}
+
+.restaurant-info p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.625rem 1.5rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+}
+
+.btn-outline-warning {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+}
+
+.btn-outline-warning:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-secondary {
+    border: 2px solid var(--gray-300);
+    color: var(--gray-600);
+    background: transparent;
+}
+
+.btn-outline-secondary:hover {
+    background: var(--gray-100);
+    border-color: var(--gray-400);
+    color: var(--gray-700);
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gray-600);
+}
+
+.feature-list i {
+    color: var(--primary);
+    font-size: 1.25rem;
+}
+
+/* Map Preview */
+.map-preview {
+    height: 300px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.map-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.map-preview .text-center {
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer */
+.footer {
+    background: var(--gray-900);
+    color: var(--gray-300);
+    padding: 4rem 0 2rem;
+}
+
+.footer h5 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer a {
+    color: var(--gray-400);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.footer a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gray-800);
+    color: white;
+    margin-right: 0.75rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: var(--transition);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Section Styles */
+.section-padding {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+[data-bs-theme="dark"] .section-title {
+    color: var(--gray-100);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+[data-bs-theme="dark"] .section-subtitle {
+    color: var(--gray-400);
+}
+
+/* Modal Styles */
+.culinary-detail-modal .modal-content {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: none;
+    box-shadow: var(--shadow-xl);
+}
+
+.culinary-detail-modal .modal-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border-bottom: none;
+    padding: 1.5rem 2rem;
+}
+
+.culinary-info-section {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.culinary-info-section:last-child {
+    border-bottom: none;
+}
+
+.store-location-item {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: var(--gray-50);
+    margin-bottom: 0.75rem;
+    transition: var(--transition);
+    cursor: pointer;
+    border-left: 3px solid var(--primary);
+}
+
+.store-location-item:hover {
+    background: var(--gray-100);
+    transform: translateX(5px);
+}
+
+[data-bs-theme="dark"] .store-location-item {
+    background: var(--gray-700);
+}
+
+[data-bs-theme="dark"] .store-location-item:hover {
+    background: var(--gray-600);
+}
+
+.distance-badge {
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.ingredient-tag {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    background: var(--gray-100);
+    border-radius: 1rem;
+    margin: 0.25rem;
+    font-size: 0.875rem;
+    transition: var(--transition);
+    border: 1px solid var(--gray-200);
+}
+
+.ingredient-tag:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+[data-bs-theme="dark"] .ingredient-tag {
+    background: var(--gray-700);
+    border-color: var(--gray-600);
+}
+
+.nutrition-chart {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.nutrition-bar {
+    flex: 1;
+    text-align: center;
+}
+
+.nutrition-progress {
+    height: 8px;
+    background: var(--gray-200);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.nutrition-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.protein-fill { background: var(--success); }
+.carbs-fill { background: var(--primary); }
+.fat-fill { background: #f59e0b; }
+
+/* Scroll Reveal */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Toast Notifications */
+.toast-container {
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    z-index: 9999;
+}
+
+.toast-notification {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-xl);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 300px;
+    animation: slideInRight 0.3s ease;
+    border-left: 4px solid var(--primary);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast-notification.success { border-left-color: var(--success); }
+.toast-notification.error { border-left-color: var(--danger); }
+.toast-notification.info { border-left-color: var(--primary); }
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        box-shadow: var(--shadow-lg);
+    }
+
+    [data-bs-theme="dark"] .navbar-collapse {
+        background: var(--gray-800);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .page-header {
+        padding: 4rem 0 3rem;
+    }
+
+    .section-padding {
+        padding: 3rem 0;
+    }
+
+    .header-stats h3 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .culinary-highlight-card {
+        margin-bottom: 1rem;
+    }
+
+    .filter-section .col-md-6 {
+        margin-bottom: 1rem;
+    }
+
+    .nutrition-chart {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .nutrition-bar {
+        text-align: left;
+    }
+    
+    .store-location-item {
+        padding: 0.75rem;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .culinary-detail-modal .modal-header {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Custom Badge Colors */
+.badge.bg-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+}
+
+.badge.bg-warning {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary)) !important;
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: var(--transition);
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Text Colors */
+.text-warning {
+    color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}

@@ -1,0 +1,808 @@
+/* css/responsive.css */
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-padding {
+        padding: 4.5rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 0 0.2rem;
+        font-size: 0.9375rem;
+        padding: 0.5rem 0.875rem !important;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .hero-section {
+        min-height: 90vh;
+    }
+    
+    .hero-title {
+        font-size: 3.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+    
+    .section-padding {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .navbar-collapse {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        border: 1px solid var(--gray-100);
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    [data-bs-theme="dark"] .navbar-collapse {
+        background: var(--gray-800);
+        border-color: var(--gray-700);
+    }
+    
+    .nav-link {
+        padding: 0.875rem 1rem !important;
+        margin: 0.25rem 0;
+        border-radius: 0.5rem;
+    }
+    
+    .stat-item {
+        margin-bottom: 1rem;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+    
+    .card-img-wrapper {
+        padding-top: 60%;
+    }
+}
+
+@media (max-width: 767.98px) and (min-width: 576px) {
+    .hero-section {
+        min-height: 85vh;
+        background-attachment: scroll;
+    }
+    
+    .hero-title {
+        font-size: 2.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-content {
+        padding: 0 1.25rem;
+    }
+    
+    .search-container {
+        max-width: 550px;
+        margin-bottom: 1.75rem;
+    }
+    
+    .search-wrapper input {
+        padding: 1.125rem 4.75rem 1.125rem 1.75rem;
+        font-size: 1.0625rem;
+    }
+    
+    .search-wrapper button {
+        padding: 0.875rem 1.75rem;
+    }
+    
+    .section-padding {
+        padding: 3.5rem 0;
+    }
+    
+    .section-title {
+        font-size: 2.25rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.0625rem;
+    }
+    
+    .card-img-wrapper {
+        padding-top: 65%;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.25rem;
+    }
+    
+    .stat-item p {
+        font-size: 0.9375rem;
+    }
+    
+    .weather-icon i {
+        font-size: 3.5rem;
+    }
+    
+    .weather-details h3 {
+        font-size: 2.75rem;
+    }
+    
+    .map-preview {
+        height: 350px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section {
+        min-height: 85vh;
+        background-attachment: scroll;
+    }
+    
+    .hero-title {
+        font-size: 2.25rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .search-container {
+        margin-bottom: 1.5rem;
+    }
+    
+    .search-wrapper input {
+        padding: 1rem 4.5rem 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .search-wrapper button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+    }
+    
+    .location-info {
+        padding: 1rem 0;
+    }
+    
+    .location-info h6 {
+        font-size: 0.9375rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .location-info p {
+        font-size: 0.875rem;
+    }
+    
+    .location-info small {
+        font-size: 0.8125rem;
+    }
+    
+    .location-info .row {
+        text-align: center;
+    }
+    
+    .location-info .text-end {
+        text-align: center !important;
+        margin-top: 0.75rem;
+    }
+    
+    .quick-stats {
+        padding: 2.5rem 0;
+    }
+    
+    .stat-item {
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+    
+    .stat-item p {
+        font-size: 0.875rem;
+    }
+    
+    .section-padding {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .navbar-brand span {
+        font-size: 1.125rem;
+    }
+    
+    .navbar-brand img {
+        height: 36px;
+        width: 36px;
+    }
+    
+    .navbar-toggler {
+        padding: 0.375rem 0.625rem;
+        font-size: 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1.25rem;
+    }
+    
+    .card-img-wrapper {
+        padding-top: 70%;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
+    
+    .card-title {
+        font-size: 1.125rem;
+    }
+    
+    .card-text {
+        font-size: 0.9375rem;
+    }
+    
+    .card-meta {
+        font-size: 0.8125rem;
+        padding-top: 0.875rem;
+    }
+    
+    .card-footer {
+        padding: 0 1.25rem 1.25rem;
+    }
+    
+    .weather-card,
+    .events-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .weather-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .weather-icon i {
+        font-size: 3.5rem;
+    }
+    
+    .weather-details h3 {
+        font-size: 2.5rem;
+    }
+    
+    .weather-details p {
+        font-size: 0.9375rem;
+    }
+    
+    .event-item {
+        padding: 1rem;
+        margin-bottom: 0.875rem;
+    }
+    
+    .event-item h6 {
+        font-size: 1rem;
+    }
+    
+    .event-item small {
+        font-size: 0.8125rem;
+    }
+    
+    .map-preview {
+        height: 300px;
+        margin-top: 1.5rem;
+    }
+    
+    .newsletter-section {
+        padding: 3rem 0;
+    }
+    
+    .newsletter-section h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .newsletter-section p {
+        font-size: 0.9375rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .newsletter-form input {
+        padding: 0.875rem 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .newsletter-form button {
+        padding: 0.875rem 2rem;
+    }
+    
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .footer .col-lg-4,
+    .footer .col-lg-3,
+    .footer .col-lg-2,
+    .footer .col-6 {
+        margin-bottom: 2rem;
+    }
+    
+    .footer h5 {
+        font-size: 1.125rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .footer a {
+        font-size: 0.9375rem;
+    }
+    
+    .footer p {
+        font-size: 0.875rem;
+    }
+    
+    .social-links a {
+        width: 42px;
+        height: 42px;
+        font-size: 1.125rem;
+    }
+    
+    .back-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .back-to-top i {
+        font-size: 1.375rem;
+    }
+    
+    .toast-container {
+        top: 4.5rem;
+        right: 0.5rem;
+        left: 0.5rem;
+    }
+    
+    .toast-notification {
+        min-width: auto;
+        width: 100%;
+        padding: 0.875rem 1.25rem;
+    }
+    
+    .autocomplete-results {
+        max-height: 320px;
+    }
+    
+    .autocomplete-item {
+        padding: 0.875rem;
+    }
+    
+    .autocomplete-item img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .autocomplete-item-info h6 {
+        font-size: 0.9375rem;
+    }
+    
+    .autocomplete-item-info small {
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 399.98px) {
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 0.625rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9375rem;
+        margin-bottom: 1.75rem;
+    }
+    
+    .search-wrapper input {
+        padding: 0.875rem 4.25rem 0.875rem 1.25rem;
+        font-size: 0.9375rem;
+    }
+    
+    .search-wrapper button {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.8125rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9375rem;
+    }
+    
+    .stat-item h3 {
+        font-size: 1.75rem;
+    }
+    
+    .stat-item p {
+        font-size: 0.8125rem;
+    }
+    
+    .card-title {
+        font-size: 1.0625rem;
+    }
+    
+    .card-text {
+        font-size: 0.875rem;
+    }
+    
+    .weather-details h3 {
+        font-size: 2.25rem;
+    }
+    
+    .back-to-top {
+        width: 46px;
+        height: 46px;
+        bottom: 1.25rem;
+        right: 1.25rem;
+    }
+    
+    .back-to-top i {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 359.98px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.875rem;
+    }
+    
+    .search-wrapper input {
+        padding: 0.75rem 4rem 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .search-wrapper button {
+        padding: 0.5rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.625rem;
+    }
+    
+    .stat-item h3 {
+        font-size: 1.625rem;
+    }
+    
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media (max-height: 700px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .search-container {
+        margin-bottom: 1.25rem;
+    }
+    
+    .search-wrapper input {
+        padding: 0.875rem 4.5rem 0.875rem 1.5rem;
+    }
+    
+    .search-wrapper button {
+        padding: 0.625rem 1.5rem;
+    }
+    
+    .hero-cta .btn {
+        padding: 0.625rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+    
+    .location-info {
+        position: relative;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 3rem 0 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9375rem;
+        margin-bottom: 1rem;
+    }
+    
+    .search-container {
+        margin-bottom: 1rem;
+    }
+    
+    .hero-cta .btn {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media print {
+    .navbar,
+    .hero-cta,
+    .location-info,
+    .back-to-top,
+    .footer,
+    .toast-container,
+    .newsletter-section {
+        display: none !important;
+    }
+    
+    .hero-section {
+        height: auto;
+        background: white !important;
+        color: black !important;
+        page-break-after: always;
+    }
+    
+    .hero-content {
+        color: black !important;
+    }
+    
+    .hero-title,
+    .hero-subtitle {
+        background: none !important;
+        -webkit-text-fill-color: black !important;
+        color: black !important;
+        text-shadow: none !important;
+    }
+    
+    .card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        margin-bottom: 1rem;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: underline !important;
+    }
+    
+    .section-padding {
+        padding: 2rem 0;
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: linear-gradient(135deg, rgba(44, 120, 108, 0.95) 0%, rgba(0, 68, 69, 0.95) 100%),
+                          url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=2400');
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-bs-theme="light"]) {
+        --light: #1e293b;
+        --dark: #f8fafc;
+        --gray-50: #0f172a;
+        --gray-100: #1e293b;
+        --gray-200: #334155;
+        --gray-300: #475569;
+        --gray-400: #64748b;
+    }
+}
+
+@media (orientation: portrait) {
+    .hero-section {
+        background-attachment: scroll;
+    }
+    
+    .parallax {
+        background-attachment: scroll !important;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+    .hero-section {
+        background-attachment: fixed;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .card:hover {
+        transform: none;
+    }
+    
+    .card:hover .card-img-top {
+        transform: none;
+    }
+    
+    .navbar-nav .nav-link:hover::before {
+        left: -100%;
+    }
+    
+    .btn,
+    .nav-link,
+    .form-control,
+    .search-wrapper button {
+        min-height: 48px;
+    }
+    
+    .search-wrapper input {
+        min-height: 52px;
+    }
+    
+    .social-links a {
+        min-width: 48px;
+        min-height: 48px;
+    }
+    
+    .autocomplete-item {
+        min-height: 64px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .hero-title {
+        font-size: 1.625rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .hero-section {
+        background-attachment: scroll;
+    }
+    
+    .card {
+        transform: none !important;
+    }
+    
+    .card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, transparent 0%, rgba(44, 120, 108, 0.05) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+    
+    .card:hover::after {
+        opacity: 1;
+    }
+}

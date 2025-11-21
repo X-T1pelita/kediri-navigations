@@ -1,0 +1,150 @@
+.error-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.error-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/error-bg.jpg') center/cover no-repeat;
+    opacity: 0.1;
+}
+
+.error-content {
+    position: relative;
+    z-index: 2;
+}
+
+.error-number {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.error-digit {
+    font-size: 8rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: bounceIn 1s ease-out;
+    display: inline-block;
+}
+
+.error-digit:nth-child(1) { animation-delay: 0.1s; }
+.error-digit:nth-child(2) { animation-delay: 0.2s; }
+.error-digit:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-100px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.error-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.error-suggestions .btn {
+    transition: all 0.3s ease;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.error-suggestions .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.error-actions .btn {
+    margin: 0.5rem;
+}
+
+.error-search .input-group {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.error-search input {
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.error-search button {
+    border: none;
+    padding: 1rem 1.5rem;
+    background: var(--primary);
+    color: white;
+}
+
+.destination-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.destination-card .card-img-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+
+.destination-card .card-img-top {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .error-digit {
+        font-size: 4rem;
+    }
+    
+    .error-suggestions .btn {
+        min-height: 100px;
+        padding: 1rem;
+    }
+    
+    .error-actions .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .error-number {
+        gap: 0.5rem;
+    }
+}

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Gethuk Mbok Darmi - Gethuk Tradisional Kediri | Kediri Tourism</title>
+    <meta name="description" content="Warung Gethuk Mbok Darmi - Gethuk tradisional khas Kediri yang legendaris sejak 1970. Rasakan keautentikan rasa gethuk dengan resep turun-temurun">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Warung Gethuk Mbok Darmi - Gethuk Tradisional Kediri">
+    <meta property="og:description" content="Warung Gethuk Mbok Darmi - Gethuk tradisional khas Kediri yang legendaris sejak 1970">
+    <meta property="og:image" content="../../images/restaurant/gethuk1.jpg">
+    <meta property="og:url" content="https://kediri-tourism.com/restaurant/warung-gethuk-mbok-darmi.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Warung Gethuk Mbok Darmi - Gethuk Tradisional Kediri">
+    <meta name="twitter:description" content="Warung Gethuk Mbok Darmi - Gethuk tradisional khas Kediri yang legendaris sejak 1970">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Warung Gethuk Mbok Darmi",
+        "description": "Warung Gethuk tradisional khas Kediri yang telah legendaris sejak 1970 dengan resep turun-temurun",
+        "image": "../../images/restaurant/gethuk1.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Veteran No. 28",
+            "addressLocality": "Kediri",
+            "addressRegion": "Jawa Timur",
+            "postalCode": "64125"
+        },
+        "telephone": "+62354123456",
+        "priceRange": "Rp 8.000 - Rp 25.000",
+        "servesCuisine": "Indonesian Traditional Food",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "2156"
+        },
+        "openingHours": "07:00-20:00"
+    }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/warung-gethuk.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="spinner-ring"></div>
+        <p>Memuat Detail Warung Gethuk Mbok Darmi...</p>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../images/logo.jpg" alt="Logo Kediri Tourism" height="40" width="40">
+                <span>Kediri Tourism</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../wisata.html">Wisata</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../kuliner.html">Kuliner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../budaya.html">Budaya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../peta.html">Peta</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button class="btn btn-sm btn-outline-secondary" id="themeToggle">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                    <button class="btn btn-sm btn-primary" id="locationAccess">
+                        <i class="bi bi-geo-alt"></i> <span class="d-none d-md-inline">Lokasi</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="restaurant-header">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../kuliner.html">Kuliner</a></li>
+                    <li class="breadcrumb-item"><a href="../kuliner.html">Restoran</a></li>
+                    <li class="breadcrumb-item active">Warung Gethuk Mbok Darmi</li>
+                </ol>
+            </nav>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="restaurant-badge">Legendaris Sejak 1970</div>
+                    <h1 class="display-4 fw-bold mb-3">Warung Gethuk Mbok Darmi</h1>
+                    <div class="rating-display mb-3">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="rating-value">4.7</span>
+                            <span class="review-count">(2,156 reviews)</span>
+                        </div>
+                    </div>
+                    <p class="lead mb-4">Gethuk tradisional khas Kediri yang dibuat dengan resep turun-temurun sejak 1970. Perpaduan sempurna antara singkong pilihan, kelapa parut, dan gula merah yang memberikan cita rasa autentik Jawa.</p>
+                    
+                    <div class="restaurant-meta">
+                        <div class="meta-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <span>Jl. Veteran No. 28, Kediri</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="bi bi-clock"></i>
+                            <span>07:00 - 20:00 WIB</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="bi bi-tag"></i>
+                            <span>Rp 8.000 - Rp 25.000</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="bi bi-telephone"></i>
+                            <span>(0354) 123456</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-lg me-2" id="directionBtn">
+                            <i class="bi bi-geo-alt"></i> Petunjuk Arah
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg" id="shareBtn">
+                            <i class="bi bi-share"></i> Bagikan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Gallery -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-8">
+                    <div class="main-image">
+                        <img src="../../images/restaurant/gethuk1.jpg" 
+                             alt="Gethuk Tradisional Mbok Darmi - Hidangan Utama" class="img-fluid rounded-3" id="mainImage">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="../../images/restaurant/gethuk2.jpg" 
+                                 alt="Proses Pembuatan Gethuk Tradisional" class="img-fluid rounded-2 thumbnail" data-image="../../images/restaurant/gethuk2.jpg">
+                        </div>
+                        <div class="col-6">
+                            <img src="../../images/restaurant/gethuk3.jpg" 
+                                 alt="Gethuk dengan Kelapa Parut" class="img-fluid rounded-2 thumbnail" data-image="../../images/restaurant/gethuk3.jpg">
+                        </div>
+                        <div class="col-6">
+                            <img src="../../images/restaurant/gethuk4.jpg" 
+                                 alt="Kemasan Gethuk untuk Oleh-oleh" class="img-fluid rounded-2 thumbnail" data-image="../../images/restaurant/gethuk4.jpg">
+                        </div>
+                        <div class="col-6">
+                            <img src="../../images/restaurant/gethuk1.jpg" 
+                                 alt="Suasana Warung Tradisional" class="img-fluid rounded-2 thumbnail" data-image="../../images/restaurant/gethuk1.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Details -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- About Section -->
+                    <div class="detail-section">
+                        <h2 class="section-title">Tentang Warung Gethuk Mbok Darmi</h2>
+                        <p class="lead">Warung Gethuk Mbok Darmi merupakan legenda kuliner tradisional Kediri yang telah berdiri sejak 1970. Didirikan oleh Mbok Darmi, warung ini tetap mempertahankan keautentikan rasa gethuk dengan resep turun-temurun.</p>
+                        
+                        <div class="history-timeline mt-4">
+                            <div class="timeline-item">
+                                <div class="timeline-year">1970</div>
+                                <div class="timeline-content">
+                                    <h5>Awal Berdiri</h5>
+                                    <p>Mbok Darmi memulai usaha gethuk dari rumah sederhana di Jl. Veteran dengan peralatan tradisional</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1985</div>
+                                <div class="timeline-content">
+                                    <h5>Populer Lokal</h5>
+                                    <p>Gethuk Mbok Darmi mulai dikenal luas di masyarakat Kediri sebagai oleh-oleh khas yang dicari</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2000</div>
+                                <div class="timeline-content">
+                                    <h5>Generasi Kedua</h5>
+                                    <p>Anak Mbok Darmi meneruskan usaha dengan tetap mempertahankan resep dan cara pembuatan tradisional</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2020</div>
+                                <div class="timeline-content">
+                                    <h5>Pengakuan Nasional</h5>
+                                    <p>Masuk dalam daftar warung tradisional Indonesia yang diakui Kementerian Pariwisata</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Section -->
+                    <div class="detail-section">
+                        <h2 class="section-title">Menu Gethuk Mbok Darmi</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="menu-item-card">
+                                    <div class="menu-item-image">
+                                        <img src="../../images/restaurant/gethuk1.jpg" alt="Gethuk Original">
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <h5>Gethuk Original</h5>
+                                        <p class="text-muted">Gethuk singkong dengan taburan kelapa parut dan gula merah asli</p>
+                                        <div class="menu-price">Rp 8.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-item-card">
+                                    <div class="menu-item-image">
+                                        <img src="../../images/restaurant/gethuk2.jpg" alt="Gethuk Pandan">
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <h5>Gethuk Pandan</h5>
+                                        <p class="text-muted">Gethuk dengan aroma pandan alami dan kelapa parut segar</p>
+                                        <div class="menu-price">Rp 10.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-item-card">
+                                    <div class="menu-item-image">
+                                        <img src="../../images/restaurant/gethuk3.jpg" alt="Gethuk Keju">
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <h5>Gethuk Keju</h5>
+                                        <p class="text-muted">Gethuk dengan taburan keju parut untuk variasi rasa modern</p>
+                                        <div class="menu-price">Rp 15.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-item-card">
+                                    <div class="menu-item-image">
+                                        <img src="../../images/restaurant/gethuk4.jpg" alt="Paket Gethuk Komplit">
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <h5>Paket Gethuk Komplit</h5>
+                                        <p class="text-muted">Paket berisi semua varian gethuk untuk oleh-oleh keluarga</p>
+                                        <div class="menu-price">Rp 25.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Features -->
+                    <div class="detail-section">
+                        <h2 class="section-title">Keistimewaan</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="feature-highlight">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-tree"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Singkong Pilihan</h5>
+                                        <p>Menggunakan singkong pilihan yang ditanam secara tradisional untuk tekstur yang sempurna</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-highlight">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-flower1"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Gula Merah Asli</h5>
+                                        <p>Gula merah asli dari tebu Jawa yang memberikan rasa manis alami dan aroma khas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-highlight">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Proses Tradisional</h5>
+                                        <p>Proses pembuatan masih menggunakan cara tradisional tanpa bahan pengawet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-highlight">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-house-heart"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Resep Turun-temurun</h5>
+                                        <p>Resep asli yang diwariskan turun-temurun sejak 1970 dengan cita rasa konsisten</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Section -->
+                    <div class="detail-section">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="section-title mb-0">Ulasan Pelanggan</h2>
+                            <button class="btn btn-primary" id="addReviewBtn">
+                                <i class="bi bi-pencil"></i> Tulis Ulasan
+                            </button>
+                        </div>
+
+                        <!-- Review Stats -->
+                        <div class="review-stats mb-4">
+                            <div class="row g-4">
+                                <div class="col-md-3 text-center">
+                                    <div class="rating-overview">
+                                        <div class="overall-rating">4.7</div>
+                                        <div class="stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <div class="total-reviews">2,156 ulasan</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="rating-bars">
+                                        <div class="rating-bar">
+                                            <span class="rating-label">5 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 68%"></div>
+                                            </div>
+                                            <span class="rating-count">1,466</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span class="rating-label">4 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 22%"></div>
+                                            </div>
+                                            <span class="rating-count">474</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span class="rating-label">3 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 6%"></div>
+                                            </div>
+                                            <span class="rating-count">129</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span class="rating-label">2 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 3%"></div>
+                                            </div>
+                                            <span class="rating-count">65</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span class="rating-label">1 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 1%"></div>
+                                            </div>
+                                            <span class="rating-count">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews List -->
+                        <div class="reviews-list" id="reviewsList">
+                            <!-- Reviews will be loaded dynamically -->
+                        </div>
+
+                        <!-- Load More Button -->
+                        <div class="text-center mt-4">
+                            <button class="btn btn-outline-primary" id="loadMoreReviews">
+                                <i class="bi bi-arrow-down"></i> Muat Lebih Banyak Ulasan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Contact & Info Card -->
+                    <div class="info-card">
+                        <h4 class="card-title">Informasi</h4>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <strong>Alamat</strong>
+                                    <p>Jl. Veteran No. 28, Kota Kediri, Jawa Timur 64125</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-clock"></i>
+                                <div>
+                                    <strong>Jam Operasional</strong>
+                                    <p>Setiap Hari: 07:00 - 20:00 WIB</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-telephone"></i>
+                                <div>
+                                    <strong>Telepon</strong>
+                                    <p>(0354) 123456</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-whatsapp"></i>
+                                <div>
+                                    <strong>WhatsApp</strong>
+                                    <p>+62 812 3456 7890</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-credit-card"></i>
+                                <div>
+                                    <strong>Harga Rata-rata</strong>
+                                    <p>Rp 8.000 - Rp 25.000 per orang</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Card -->
+                    <div class="info-card">
+                        <h4 class="card-title">Lokasi</h4>
+                        <div class="map-placeholder">
+                            <div class="map-content">
+                                <i class="bi bi-map display-4 text-primary"></i>
+                                <p class="mt-2 fw-bold">Peta Lokasi</p>
+                                <small class="text-muted">Warung Gethuk Mbok Darmi</small>
+                                <button class="btn btn-primary btn-sm mt-3" onclick="window.open('https://maps.google.com/?q=Warung+Gethuk+Mbok+Darmi+Kediri', '_blank')">
+                                    <i class="bi bi-geo-alt"></i> Buka di Google Maps
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features Card -->
+                    <div class="info-card">
+                        <h4 class="card-title">Fasilitas</h4>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Tempat Duduk Tradisional</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Parkir Motor</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Kemasan Oleh-oleh</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Toilet Bersih</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Free Air Mineral</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Pembayaran Digital</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Items -->
+                    <div class="info-card">
+                        <h4 class="card-title">Menu Populer</h4>
+                        <div class="popular-items">
+                            <div class="popular-item">
+                                <div class="item-info">
+                                    <h6>Gethuk Original</h6>
+                                    <small class="text-muted">Rp 8.000</small>
+                                </div>
+                                <div class="item-badge">🔥 Terlaris</div>
+                            </div>
+                            <div class="popular-item">
+                                <div class="item-info">
+                                    <h6>Gethuk Pandan</h6>
+                                    <small class="text-muted">Rp 10.000</small>
+                                </div>
+                                <div class="item-badge">⭐ Recommended</div>
+                            </div>
+                            <div class="popular-item">
+                                <div class="item-info">
+                                    <h6>Paket Komplit</h6>
+                                    <small class="text-muted">Rp 25.000</small>
+                                </div>
+                            </div>
+                            <div class="popular-item">
+                                <div class="item-info">
+                                    <h6>Teh Hangat</h6>
+                                    <small class="text-muted">Rp 5.000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="../../images/logo.jpg" alt="Logo Kediri Tourism" height="40" class="mb-3">
+                    <p class="mb-4">Portal wisata resmi Kota Kediri yang menyediakan informasi lengkap tentang destinasi, kuliner, budaya, dan navigasi real-time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Menu</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../wisata.html">Wisata</a></li>
+                        <li><a href="../kuliner.html">Kuliner</a></li>
+                        <li><a href="../budaya.html">Budaya</a></li>
+                        <li><a href="../peta.html">Peta</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h5>Informasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../tentang.html">Tentang Kami</a></li>
+                        <li><a href="../kontak.html">Kontak</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt"></i> Jl. Mayor Bismo No.1, Kediri</li>
+                        <li class="mb-2"><i class="bi bi-telephone"></i> (0354) 123456</li>
+                        <li class="mb-2"><i class="bi bi-envelope"></i> info@kediri-tourism.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0">&copy; 2024 Kediri Tourism. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for Kediri</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Add Review Modal -->
+    <div class="modal fade" id="addReviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tulis Ulasan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Rating</label>
+                            <div class="rating-input">
+                                <div class="stars">
+                                    <i class="bi bi-star" data-rating="1"></i>
+                                    <i class="bi bi-star" data-rating="2"></i>
+                                    <i class="bi bi-star" data-rating="3"></i>
+                                    <i class="bi bi-star" data-rating="4"></i>
+                                    <i class="bi bi-star" data-rating="5"></i>
+                                </div>
+                                <input type="hidden" id="userRating" name="rating" value="0">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewTitle" class="form-label fw-bold">Judul Ulasan</label>
+                            <input type="text" class="form-control" id="reviewTitle" placeholder="Contoh: Gethuk Terenak di Kediri!">
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label fw-bold">Ulasan Anda</label>
+                            <textarea class="form-control" id="reviewText" rows="5" placeholder="Bagikan pengalaman Anda..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Foto (Opsional)</label>
+                            <input type="file" class="form-control" id="reviewPhotos" accept="image/*" multiple>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" id="submitReview">Kirim Ulasan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/warung-gethuk.js"></script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soto Ayam Lamongan Cak Har - Soto Terenak di Kediri | Kediri Tourism</title>
+    <meta name="description" content="Soto Ayam Lamongan Cak Har - Soto ayam dengan kuah bening khas Lamongan yang legendaris di Kediri. Temukan lokasi, menu, dan review terbaik">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Soto Ayam Lamongan Cak Har - Soto Terenak di Kediri">
+    <meta property="og:description" content="Soto Ayam Lamongan Cak Har - Soto ayam dengan kuah bening khas Lamongan yang legendaris di Kediri">
+    <meta property="og:image" content="../../images/restaurant/soto1.jpg">
+    <meta property="og:url" content="https://kediri-tourism.com/restaurant/soto-ayam-lamongan-cak-har.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Soto Ayam Lamongan Cak Har - Soto Terenak di Kediri">
+    <meta name="twitter:description" content="Soto Ayam Lamongan Cak Har - Soto ayam dengan kuah bening khas Lamongan yang legendaris di Kediri">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Soto Ayam Lamongan Cak Har",
+        "description": "Soto Ayam Lamongan dengan kuah bening khas yang sudah legendaris di Kediri sejak 1985",
+        "image": "../../images/restaurant/soto1.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Mayor Bismo No. 12",
+            "addressLocality": "Kediri",
+            "addressRegion": "Jawa Timur",
+            "postalCode": "64125"
+        },
+        "telephone": "+62354123456",
+        "priceRange": "Rp 12.000 - Rp 30.000",
+        "servesCuisine": "Indonesian Traditional Food",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "987"
+        },
+        "openingHours": "06:00-22:00"
+    }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/soto-ayam.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="spinner-ring"></div>
+        <p>Memuat Detail Soto Ayam Lamongan Cak Har...</p>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../images/logo.jpg" alt="Logo Kediri Tourism" height="40" width="40">
+                <span>Kediri Tourism</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../wisata.html">Wisata</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../kuliner.html">Kuliner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../budaya.html">Budaya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../peta.html">Peta</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button class="btn btn-sm btn-outline-secondary" id="themeToggle">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                    <button class="btn btn-sm btn-primary" id="locationAccess">
+                        <i class="bi bi-geo-alt"></i> <span class="d-none d-md-inline">Lokasi</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="restaurant-header">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../kuliner.html">Kuliner</a></li>
+                    <li class="breadcrumb-item"><a href="../kuliner.html">Restoran</a></li>
+                    <li class="breadcrumb-item active">Soto Ayam Lamongan Cak Har</li>
+                </ol>
+            </nav>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="restaurant-badge">Legendaris Sejak 1985</div>
+                    <h1 class="display-4 fw-bold mb-3">Soto Ayam Lamongan Cak Har</h1>
+                    <div class="rating-display mb-3">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="rating-value">4.6</span>
+                            <span class="review-count">(987 reviews)</span>
+                        </div>
+                    </div>
+                    <p class="lead mb-4">Soto ayam dengan kuah bening khas Lamongan yang sudah legendaris di Kediri sejak 1985. Daging ayam kampung yang empuk dengan bumbu rempah yang pas.</p>
+                    
+                    <div class="restaurant-meta">
+                        <div class="meta-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <span>Jl. Mayor Bismo No. 12, Kediri</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="bi bi-clock"></i>
+                            <span>06:00 - 22:00 WIB</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="bi bi-tag"></i>
+                            <span>Rp 12.000 - Rp 30.000</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="bi bi-telephone"></i>
+                            <span>(0354) 123456</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-lg me-2" id="directionBtn">
+                            <i class="bi bi-geo-alt"></i> Petunjuk Arah
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg" id="shareBtn">
+                            <i class="bi bi-share"></i> Bagikan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Gallery -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-8">
+                    <div class="main-image">
+                        <img src="../../images/restaurant/soto1.jpg" 
+                             alt="Soto Ayam Lamongan Cak Har - Hidangan Utama" class="img-fluid rounded-3" id="mainImage">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="../../images/restaurant/soto2.jpg" 
+                                 alt="Proses Pembuatan Soto" class="img-fluid rounded-2 thumbnail" data-image="../../images/restaurant/soto2.jpg">
+                        </div>
+                        <div class="col-6">
+                            <img src="../../images/restaurant/soto3.jpg" 
+                                 alt="Daging Ayam Kampung" class="img-fluid rounded-2 thumbnail" data-image="../../images/restaurant/soto3.jpg">
+                        </div>
+                        <div class="col-6">
+                            <img src="../../images/restaurant/soto4.jpg" 
+                                 alt="Suasana Restoran" class="img-fluid rounded-2 thumbnail" data-image="../../images/restaurant/soto4.jpg">
+                        </div>
+                        <div class="col-6">
+                            <img src="../../images/restaurant/soto5.jpg" 
+                                 alt="Pelengkap Soto" class="img-fluid rounded-2 thumbnail" data-image="../../images/restaurant/soto5.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Details -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- About Section -->
+                    <div class="detail-section">
+                        <h2 class="section-title">Tentang Soto Ayam Lamongan Cak Har</h2>
+                        <p class="lead">Soto Ayam Lamongan Cak Har merupakan warung soto legendaris yang telah berdiri sejak 1985. Dikenal dengan kuah beningnya yang gurih dan daging ayam kampung yang empuk.</p>
+                        
+                        <div class="history-timeline mt-4">
+                            <div class="timeline-item">
+                                <div class="timeline-year">1985</div>
+                                <div class="timeline-content">
+                                    <h5>Awal Berdiri</h5>
+                                    <p>Cak Har memulai usaha soto ayam dengan gerobak dorong di Jl. Mayor Bismo</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1995</div>
+                                <div class="timeline-content">
+                                    <h5>Ekspansi Pertama</h5>
+                                    <p>Beralih dari gerobak ke warung permanen karena tingginya permintaan pelanggan</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2005</div>
+                                <div class="timeline-content">
+                                    <h5>Pengakuan Lokal</h5>
+                                    <p>Terpilih sebagai Soto Terenak se-Kediri oleh komunitas kuliner lokal</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2020</div>
+                                <div class="timeline-content">
+                                    <h5>Modernisasi</h5>
+                                    <p>Melakukan renovasi dan penambahan fasilitas untuk kenyamanan pelanggan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Section -->
+                    <div class="detail-section">
+                        <h2 class="section-title">Menu Soto Ayam Lamongan</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="menu-item-card">
+                                    <div class="menu-item-image">
+                                        <img src="../../images/restaurant/soto1.jpg" alt="Soto Ayam Biasa">
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <h5>Soto Ayam Biasa</h5>
+                                        <p class="text-muted">Soto ayam dengan daging ayam kampung, suun, dan tauge</p>
+                                        <div class="menu-price">Rp 12.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-item-card">
+                                    <div class="menu-item-image">
+                                        <img src="../../images/restaurant/soto2.jpg" alt="Soto Ayam Komplit">
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <h5>Soto Ayam Komplit</h5>
+                                        <p class="text-muted">Soto ayam dengan tambahan telur, perkedel, dan kerupuk</p>
+                                        <div class="menu-price">Rp 18.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-item-card">
+                                    <div class="menu-item-image">
+                                        <img src="../../images/restaurant/soto3.jpg" alt="Soto Ayam Special">
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <h5>Soto Ayam Special</h5>
+                                        <p class="text-muted">Soto ayam dengan daging ekstra dan semua pelengkap</p>
+                                        <div class="menu-price">Rp 25.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-item-card">
+                                    <div class="menu-item-image">
+                                        <img src="../../images/restaurant/soto4.jpg" alt="Nasi Soto Campur">
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <h5>Nasi Soto Campur</h5>
+                                        <p class="text-muted">Nasi putih dengan kuah soto dan semua isiannya</p>
+                                        <div class="menu-price">Rp 15.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Features -->
+                    <div class="detail-section">
+                        <h2 class="section-title">Keistimewaan</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="feature-highlight">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-egg-fried"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Ayam Kampung</h5>
+                                        <p>Menggunakan ayam kampung pilihan yang membuat daging lebih empuk dan gurih</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-highlight">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-flower1"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Bumbu Rempah</h5>
+                                        <p>Racikan bumbu rempah asli Lamongan yang diwariskan turun-temurun</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-highlight">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Masak Tradisional</h5>
+                                        <p>Proses memasak masih menggunakan cara tradisional untuk menjaga cita rasa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-highlight">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-cup-hot"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h5>Kuah Bening</h5>
+                                        <p>Kuah soto yang bening, tidak berminyak, dengan rasa gurih yang pas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Section -->
+                    <div class="detail-section">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="section-title mb-0">Ulasan Pelanggan</h2>
+                            <button class="btn btn-primary" id="addReviewBtn">
+                                <i class="bi bi-pencil"></i> Tulis Ulasan
+                            </button>
+                        </div>
+
+                        <!-- Review Stats -->
+                        <div class="review-stats mb-4">
+                            <div class="row g-4">
+                                <div class="col-md-3 text-center">
+                                    <div class="rating-overview">
+                                        <div class="overall-rating">4.6</div>
+                                        <div class="stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <div class="total-reviews">987 ulasan</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="rating-bars">
+                                        <div class="rating-bar">
+                                            <span class="rating-label">5 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 65%"></div>
+                                            </div>
+                                            <span class="rating-count">642</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span class="rating-label">4 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 20%"></div>
+                                            </div>
+                                            <span class="rating-count">197</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span class="rating-label">3 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 8%"></div>
+                                            </div>
+                                            <span class="rating-count">79</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span class="rating-label">2 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 4%"></div>
+                                            </div>
+                                            <span class="rating-count">39</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span class="rating-label">1 bintang</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 3%"></div>
+                                            </div>
+                                            <span class="rating-count">30</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews List -->
+                        <div class="reviews-list" id="reviewsList">
+                        </div>
+
+                        <!-- Load More Button -->
+                        <div class="text-center mt-4">
+                            <button class="btn btn-outline-primary" id="loadMoreReviews">
+                                <i class="bi bi-arrow-down"></i> Muat Lebih Banyak Ulasan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Contact & Info Card -->
+                    <div class="info-card">
+                        <h4 class="card-title">Informasi</h4>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <strong>Alamat</strong>
+                                    <p>Jl. Mayor Bismo No. 12, Kota Kediri, Jawa Timur 64125</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-clock"></i>
+                                <div>
+                                    <strong>Jam Operasional</strong>
+                                    <p>Setiap Hari: 06:00 - 22:00 WIB</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-telephone"></i>
+                                <div>
+                                    <strong>Telepon</strong>
+                                    <p>(0354) 123456</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-whatsapp"></i>
+                                <div>
+                                    <strong>WhatsApp</strong>
+                                    <p>+62 812 3456 7890</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-credit-card"></i>
+                                <div>
+                                    <strong>Harga Rata-rata</strong>
+                                    <p>Rp 12.000 - Rp 30.000 per orang</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Card -->
+                    <div class="info-card">
+                        <h4 class="card-title">Lokasi</h4>
+                        <div class="map-placeholder">
+                            <div class="map-content">
+                                <i class="bi bi-map display-4 text-primary"></i>
+                                <p class="mt-2 fw-bold">Peta Lokasi</p>
+                                <small class="text-muted">Soto Ayam Lamongan Cak Har</small>
+                                <button class="btn btn-primary btn-sm mt-3" onclick="window.open('https://maps.google.com/?q=Soto+Ayam+Lamongan+Cak+Har+Kediri', '_blank')">
+                                    <i class="bi bi-geo-alt"></i> Buka di Google Maps
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features Card -->
+                    <div class="info-card">
+                        <h4 class="card-title">Fasilitas</h4>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>AC Ruangan</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Parkir Luas</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Free WiFi</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Toilet Bersih</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Drive Thru</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span>Pembayaran Digital</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Items -->
+                    <div class="info-card">
+                        <h4 class="card-title">Menu Populer</h4>
+                        <div class="popular-items">
+                            <div class="popular-item">
+                                <div class="item-info">
+                                    <h6>Soto Ayam Komplit</h6>
+                                    <small class="text-muted">Rp 18.000</small>
+                                </div>
+                                <div class="item-badge">🔥 Terlaris</div>
+                            </div>
+                            <div class="popular-item">
+                                <div class="item-info">
+                                    <h6>Soto Ayam Special</h6>
+                                    <small class="text-muted">Rp 25.000</small>
+                                </div>
+                                <div class="item-badge">⭐ Recommended</div>
+                            </div>
+                            <div class="popular-item">
+                                <div class="item-info">
+                                    <h6>Es Jeruk</h6>
+                                    <small class="text-muted">Rp 8.000</small>
+                                </div>
+                            </div>
+                            <div class="popular-item">
+                                <div class="item-info">
+                                    <h6>Teh Hangat</h6>
+                                    <small class="text-muted">Rp 5.000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="../../images/logo.jpg" alt="Logo Kediri Tourism" height="40" class="mb-3">
+                    <p class="mb-4">Portal wisata resmi Kota Kediri yang menyediakan informasi lengkap tentang destinasi, kuliner, budaya, dan navigasi real-time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Menu</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../wisata.html">Wisata</a></li>
+                        <li><a href="../kuliner.html">Kuliner</a></li>
+                        <li><a href="../budaya.html">Budaya</a></li>
+                        <li><a href="../peta.html">Peta</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h5>Informasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../tentang.html">Tentang Kami</a></li>
+                        <li><a href="../kontak.html">Kontak</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt"></i> Jl. Mayor Bismo No.1, Kediri</li>
+                        <li class="mb-2"><i class="bi bi-telephone"></i> (0354) 123456</li>
+                        <li class="mb-2"><i class="bi bi-envelope"></i> info@kediri-tourism.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0">&copy; 2024 Kediri Tourism. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for Kediri</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Add Review Modal -->
+    <div class="modal fade" id="addReviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tulis Ulasan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Rating</label>
+                            <div class="rating-input">
+                                <div class="stars">
+                                    <i class="bi bi-star" data-rating="1"></i>
+                                    <i class="bi bi-star" data-rating="2"></i>
+                                    <i class="bi bi-star" data-rating="3"></i>
+                                    <i class="bi bi-star" data-rating="4"></i>
+                                    <i class="bi bi-star" data-rating="5"></i>
+                                </div>
+                                <input type="hidden" id="userRating" name="rating" value="0">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewTitle" class="form-label fw-bold">Judul Ulasan</label>
+                            <input type="text" class="form-control" id="reviewTitle" placeholder="Contoh: Soto Terenak di Kediri!">
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label fw-bold">Ulasan Anda</label>
+                            <textarea class="form-control" id="reviewText" rows="5" placeholder="Bagikan pengalaman Anda..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Foto (Opsional)</label>
+                            <input type="file" class="form-control" id="reviewPhotos" accept="image/*" multiple>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" id="submitReview">Kirim Ulasan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/soto-ayam.js"></script>
+</body>
+</html>

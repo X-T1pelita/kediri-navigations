@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budaya & Tradisi - Kediri Tourism</title>
+    <meta name="description" content="Kenali kekayaan budaya, tradisi, dan kesenian khas Kota Kediri yang penuh makna dan telah diwariskan turun temurun">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/logo.jpg">
+    
+    <!-- Bootstrap 5.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/budaya.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#2c786c">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Budaya & Tradisi - Kediri Tourism">
+    <meta property="og:description" content="Kenali kekayaan budaya, tradisi, dan kesenian khas Kota Kediri">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../images/culture/culture-og.jpg">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="spinner-ring"></div>
+        <p>Memuat Budaya Kediri...</p>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.jpg" alt="Logo Kediri Tourism" height="40" width="40">
+                <span>Kediri Tourism</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wisata.html">Wisata</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kuliner.html">Kuliner</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="budaya.html">Budaya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="peta.html">Peta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button class="btn btn-sm btn-outline-secondary" id="themeToggle">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                    <button class="btn btn-sm btn-primary" id="locationAccess">
+                        <i class="bi bi-geo-alt"></i> <span class="d-none d-md-inline">Lokasi</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Budaya & Tradisi</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold mb-3">Budaya & Tradisi Kediri</h1>
+                    <p class="lead mb-0 opacity-90">Mengenal kekayaan budaya, seni, dan tradisi yang menjadi identitas dan kebanggaan Kota Kediri</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <div class="header-stats">
+                        <h3 class="mb-0" id="totalCulture">0+</h3>
+                        <small>Warisan Budaya</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Highlights -->
+    <section class="section-padding scroll-reveal">
+        <div class="container">
+            <div class="row g-4" id="cultureHighlights">
+                <!-- Highlights will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section scroll-reveal">
+        <div class="container">
+            <div class="category-pills" id="categoryPills">
+                <!-- Category pills will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Arts Section -->
+    <section class="section-padding scroll-reveal" id="artsSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kesenian Tradisional</h2>
+                <p class="section-subtitle">Ragam seni pertunjukan yang menjadi warisan budaya Kediri dan telah dilestarikan turun-temurun</p>
+            </div>
+            
+            <div class="row g-4" id="artsGrid">
+                <!-- Arts cards will be loaded by JavaScript -->
+            </div>
+
+            <div id="loadingArts" class="text-center py-5" style="display: none;">
+                <div class="spinner-custom mx-auto"></div>
+                <p class="mt-3 text-muted">Memuat kesenian...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Handicrafts Section -->
+    <section class="section-padding bg-light scroll-reveal" id="handicraftsSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kerajinan Tangan</h2>
+                <p class="section-subtitle">Karya seni dan kerajinan khas yang menjadi kebanggaan dan identitas budaya Kediri</p>
+            </div>
+            
+            <div class="row g-4" id="handicraftsGrid">
+                <!-- Handicrafts cards will be loaded by JavaScript -->
+            </div>
+
+            <div id="loadingHandicrafts" class="text-center py-5" style="display: none;">
+                <div class="spinner-custom mx-auto"></div>
+                <p class="mt-3 text-muted">Memuat kerajinan...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Ceremonies Section -->
+    <section class="section-padding scroll-reveal" id="ceremoniesSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Upacara & Tradisi</h2>
+                <p class="section-subtitle">Ritual dan upacara adat yang masih dilestarikan dan dilaksanakan oleh masyarakat Kediri</p>
+            </div>
+            
+            <div class="row g-4" id="ceremoniesGrid">
+                <!-- Ceremonies cards will be loaded by JavaScript -->
+            </div>
+
+            <div id="loadingCeremonies" class="text-center py-5" style="display: none;">
+                <div class="spinner-custom mx-auto"></div>
+                <p class="mt-3 text-muted">Memuat upacara...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Events Calendar -->
+    <section class="section-padding bg-light scroll-reveal">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title mb-4">Kalender Budaya</h2>
+                    <p class="mb-4">Jadwal event dan pertunjukan budaya di Kediri. Jangan lewatkan momen-momen spesial untuk menyaksikan langsung kekayaan budaya kota ini.</p>
+                    
+                    <div class="info-box">
+                        <h6><i class="bi bi-info-circle"></i> Informasi Penting</h6>
+                        <p>Event budaya dapat berubah sewaktu-waktu. Silakan hubungi kontak yang tertera atau cek website resmi untuk informasi terbaru.</p>
+                    </div>
+
+                    <div class="upcoming-events mt-4">
+                        <h5 class="mb-3"><i class="bi bi-calendar-check text-primary"></i> Event Mendatang</h5>
+                        <div class="event-list" id="upcomingEvents">
+                            <!-- Events will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <a href="kontak.html" class="btn btn-success btn-lg mt-4">
+                        <i class="bi bi-calendar-plus"></i> Lihat Kalender Lengkap
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="calendar-preview">
+                        <div class="text-center">
+                            <h4>Kalender Budaya 2024</h4>
+                            <p>Fitur kalender interaktif akan menampilkan jadwal lengkap event budaya sepanjang tahun dengan detail waktu, lokasi, dan informasi tiket</p>
+                            <i class="bi bi-calendar-month display-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section-padding scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Fakta Budaya Kediri</h2>
+                <p class="section-subtitle">Data dan statistik tentang kekayaan budaya yang dimiliki Kota Kediri</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <i class="bi bi-music-note-beamed"></i>
+                        <h3>8+</h3>
+                        <p>Kesenian Tradisional</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <i class="bi bi-brush"></i>
+                        <h3>6+</h3>
+                        <p>Jenis Kerajinan</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <i class="bi bi-calendar-event"></i>
+                        <h3>5+</h3>
+                        <p>Upacara Adat</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <i class="bi bi-people"></i>
+                        <h3>100+</h3>
+                        <p>Pengrajin Aktif</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="../images/logo.jpg" alt="Logo Kediri Tourism" height="40" class="mb-3">
+                    <p class="mb-4">Portal wisata resmi Kota Kediri yang menyediakan informasi lengkap tentang destinasi, kuliner, budaya, dan navigasi real-time.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Menu</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="wisata.html">Wisata</a></li>
+                        <li><a href="kuliner.html">Kuliner</a></li>
+                        <li><a href="budaya.html">Budaya</a></li>
+                        <li><a href="peta.html">Peta</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h5>Informasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt"></i> Jl. Mayor Bismo No.1, Kediri</li>
+                        <li class="mb-2"><i class="bi bi-telephone"></i> (0354) 123456</li>
+                        <li class="mb-2"><i class="bi bi-envelope"></i> info@kediri-tourism.com</li>
+                        <li class="mb-2"><i class="bi bi-whatsapp"></i> +62 812-3456-7890</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0">&copy; 2024 Kediri Tourism. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for Kediri</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Culture Detail Modal -->
+    <div class="modal fade culture-detail-modal" id="cultureDetailModal" tabindex="-1" aria-labelledby="cultureDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cultureDetailModalLabel">Detail Budaya</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cultureDetailContent">
+                        <!-- Content will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Budaya Page Class
+        class BudayaPage {
+            constructor() {
+                this.config = null;
+                this.currentFilter = 'all';
+                this.currentData = {
+                    arts: [],
+                    handicrafts: [],
+                    ceremonies: []
+                };
+                this.init();
+            }
+            
+            async init() {
+                this.setupTheme();
+                this.setupEventListeners();
+                await this.loadConfig();
+                this.setupScrollEffects();
+                
+                setTimeout(() => {
+                    document.getElementById('loading').classList.add('hidden');
+                }, 1000);
+            }
+            
+            async loadConfig() {
+                try {
+                    const response = await fetch('../config/config-website.json');
+                    this.config = await response.json();
+                    
+                    if (this.config && this.config.culture) {
+                        this.renderHighlights();
+                        this.renderCategories();
+                        this.renderAllContent();
+                        this.renderUpcomingEvents();
+                        this.updateStats();
+                    } else {
+                        throw new Error('Data budaya tidak ditemukan');
+                    }
+                } catch (error) {
+                    console.error('Error loading config:', error);
+                    this.showNotification('Gagal memuat data budaya', 'error');
+                    this.loadFallbackData();
+                }
+            }
+            
+            loadFallbackData() {
+                // Fallback data jika config tidak bisa di-load
+                this.config = {
+                    culture: {
+                        highlights: [
+                            {
+                                title: "Kesenian Tradisional",
+                                icon: "music-note-beamed",
+                                description: "Berbagai seni pertunjukan yang telah turun-temurun dilestarikan"
+                            },
+                            {
+                                title: "Kerajinan Tangan",
+                                icon: "brush",
+                                description: "Karya seni dan kerajinan khas yang menjadi ciri khas Kediri"
+                            },
+                            {
+                                title: "Upacara Adat",
+                                icon: "calendar-event",
+                                description: "Ritual dan upacara tradisional yang masih dilaksanakan"
+                            }
+                        ],
+                        categories: [
+                            { name: "Kesenian", value: "seni", count: 8, icon: "music-note-beamed" },
+                            { name: "Kerajinan", value: "kerajinan", count: 6, icon: "brush" },
+                            { name: "Upacara", value: "upacara", count: 5, icon: "calendar-event" }
+                        ],
+                        arts: [
+                            {
+                                id: 1,
+                                name: "Tari Jaranan",
+                                category: "seni",
+                                image: "../images/culture/tari-jaranan.jpg",
+                                rating: 4.8,
+                                reviews: 892,
+                                description: "Tari tradisional dengan properti kuda lumping yang penuh mistis dan energik.",
+                                origin: "Kediri, Jawa Timur",
+                                performers: "Kelompok seni lokal",
+                                duration: "30-60 menit",
+                                significance: "Simbol perlawanan dan keberanian",
+                                performances: ["Festival budaya", "Pernikahan", "Khitanan"],
+                                tags: ["Tradisional", "Energik", "Mistis"],
+                                history: "Tari Jaranan berasal dari tradisi perlawanan masyarakat Kediri melawan penjajah.",
+                                equipment: ["Kuda lumping", "Gamelan", "Kostum tradisional"],
+                                venues: [
+                                    {
+                                        name: "Sanggar Seni Jaranan Kediri",
+                                        address: "Jl. Veteran No. 23",
+                                        contact: "(0354) 334455"
+                                    }
+                                ]
+                            }
+                        ],
+                        handicrafts: [
+                            {
+                                id: 1,
+                                name: "Batik Kediri",
+                                category: "kerajinan",
+                                image: "../images/culture/batik-kediri.jpg",
+                                rating: 4.8,
+                                reviews: 1543,
+                                description: "Batik dengan motif khas yang terinspirasi dari alam dan sejarah Kediri.",
+                                materials: ["Kain katun", "Kain sutra", "Malam", "Pewarna alami"],
+                                process: "Tulis dan cap",
+                                motifs: ["Gunung Kelud", "Tahu Takwa", "Candi Surowono"],
+                                priceRange: "Rp 150.000 - 2.500.000",
+                                artisans: "Pengrajin batik lokal",
+                                tags: ["Eksklusif", "Handmade", "Tradisional"],
+                                history: "Batik Kediri berkembang sejak era Kerajaan Kediri.",
+                                techniques: ["Batik tulis", "Batik cap"],
+                                workshops: [
+                                    {
+                                        name: "Batik Griya Kediri",
+                                        address: "Jl. Brawijaya No. 34",
+                                        contact: "(0354) 445566",
+                                        openHours: "08:00 - 17:00 WIB"
+                                    }
+                                ]
+                            }
+                        ],
+                        ceremonies: [
+                            {
+                                id: 1,
+                                name: "Bersih Desa",
+                                category: "upacara",
+                                image: "../images/culture/bersih-desa.jpg",
+                                rating: 4.7,
+                                reviews: 678,
+                                description: "Upacara tradisional untuk membersihkan desa dari bala dan marabahaya.",
+                                timing: "Setahun sekali (setelah panen)",
+                                location: "Desa-desa di Kediri",
+                                participants: "Seluruh warga desa",
+                                rituals: ["Kirab budaya", "Sesaji", "Doa bersama", "Wayang kulit"],
+                                significance: "Ungkapan syukur dan tolak bala",
+                                tags: ["Sakral", "Komunal", "Tradisional"],
+                                history: "Bersih Desa telah dilakukan sejak ratusan tahun lalu.",
+                                preparations: ["Gotong royong", "Pembuatan sesaji", "Persiapan wayang"],
+                                offerings: ["Tumpeng", "Jajan pasar", "Bunga", "Kemenyan"],
+                                schedule: [
+                                    { time: "07:00", activity: "Kerja bakti bersih desa" },
+                                    { time: "14:00", activity: "Kirab sesaji" },
+                                    { time: "16:00", activity: "Doa bersama" }
+                                ]
+                            }
+                        ],
+                        culturalEvents: [
+                            {
+                                id: 1,
+                                name: "Festival Jaranan Kediri",
+                                date: "15 Agustus 2024",
+                                time: "19:00 - 23:00 WIB",
+                                location: "Alun-alun Kediri",
+                                type: "Pertunjukan",
+                                category: "seni",
+                                description: "Festival tahunan menampilkan berbagai kelompok tari jaranan."
+                            }
+                        ]
+                    }
+                };
+                
+                this.renderHighlights();
+                this.renderCategories();
+                this.renderAllContent();
+                this.renderUpcomingEvents();
+                this.updateStats();
+            }
+            
+            setupTheme() {
+                const theme = localStorage.getItem('theme') || 'light';
+                document.documentElement.setAttribute('data-bs-theme', theme);
+                const icon = document.querySelector('#themeToggle i');
+                if (icon) {
+                    icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
+                }
+            }
+            
+            setupEventListeners() {
+                // Theme toggle
+                const themeToggle = document.getElementById('themeToggle');
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', () => {
+                        const current = document.documentElement.getAttribute('data-bs-theme');
+                        const theme = current === 'light' ? 'dark' : 'light';
+                        document.documentElement.setAttribute('data-bs-theme', theme);
+                        localStorage.setItem('theme', theme);
+                        const icon = document.querySelector('#themeToggle i');
+                        icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
+                    });
+                }
+
+                // Location access
+                const locationBtn = document.getElementById('locationAccess');
+                if (locationBtn) {
+                    locationBtn.addEventListener('click', () => {
+                        this.requestLocation();
+                    });
+                }
+
+                // Scroll effects
+                window.addEventListener('scroll', () => {
+                    const navbar = document.querySelector('.navbar');
+                    const backToTop = document.getElementById('backToTop');
+                    
+                    if (window.scrollY > 100) {
+                        navbar.classList.add('scrolled');
+                        backToTop.classList.add('show');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                        backToTop.classList.remove('show');
+                    }
+                });
+
+                // Back to top
+                const backToTop = document.getElementById('backToTop');
+                if (backToTop) {
+                    backToTop.addEventListener('click', () => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                }
+            }
+
+            setupScrollEffects() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.scroll-reveal').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            requestLocation() {
+                if (!navigator.geolocation) {
+                    this.showNotification('Browser tidak mendukung geolocation', 'error');
+                    return;
+                }
+
+                this.showNotification('Mendeteksi lokasi...', 'info');
+
+                navigator.geolocation.getCurrentPosition(
+                    () => {
+                        this.showNotification('Lokasi terdeteksi!', 'success');
+                    },
+                    () => {
+                        this.showNotification('Gagal mengakses lokasi', 'error');
+                    }
+                );
+            }
+            
+            renderHighlights() {
+                const container = document.getElementById('cultureHighlights');
+                const highlights = this.config.culture.highlights;
+                
+                if (!highlights || !Array.isArray(highlights)) {
+                    console.error('Highlights data is invalid:', highlights);
+                    container.innerHTML = '<div class="col-12"><p>Data highlights tidak tersedia</p></div>';
+                    return;
+                }
+                
+                container.innerHTML = highlights.map(highlight => `
+                    <div class="col-lg-4 col-md-6">
+                        <div class="culture-highlight-card">
+                            <i class="bi bi-${highlight.icon}"></i>
+                            <h4>${highlight.title}</h4>
+                            <p>${highlight.description}</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            renderCategories() {
+                const container = document.getElementById('categoryPills');
+                const categories = this.config.culture.categories;
+                
+                if (!categories || !Array.isArray(categories)) {
+                    console.error('Categories data is invalid:', categories);
+                    return;
+                }
+                
+                let html = `
+                    <div class="category-pill active" data-category="all">
+                        <i class="bi bi-grid"></i>
+                        <span>Semua</span>
+                    </div>
+                `;
+                
+                html += categories.map(category => `
+                    <div class="category-pill" data-category="${category.value}">
+                        <i class="bi bi-${category.icon}"></i>
+                        <span>${category.name}</span>
+                        <span class="badge">${category.count}</span>
+                    </div>
+                `).join('');
+                
+                container.innerHTML = html;
+                
+                // Add click events
+                container.querySelectorAll('.category-pill').forEach(pill => {
+                    pill.addEventListener('click', (e) => {
+                        const category = e.currentTarget.dataset.category;
+                        this.filterByCategory(category);
+                        
+                        // Update active state
+                        container.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+                        e.currentTarget.classList.add('active');
+                    });
+                });
+            }
+            
+            renderAllContent() {
+                this.currentData.arts = this.config.culture.arts || [];
+                this.currentData.handicrafts = this.config.culture.handicrafts || [];
+                this.currentData.ceremonies = this.config.culture.ceremonies || [];
+                
+                this.renderArts(this.currentData.arts);
+                this.renderHandicrafts(this.currentData.handicrafts);
+                this.renderCeremonies(this.currentData.ceremonies);
+            }
+            
+            filterByCategory(category) {
+                this.currentFilter = category;
+                
+                if (category === 'all') {
+                    this.renderArts(this.config.culture.arts || []);
+                    this.renderHandicrafts(this.config.culture.handicrafts || []);
+                    this.renderCeremonies(this.config.culture.ceremonies || []);
+                    
+                    // Show all sections
+                    document.getElementById('artsSection').style.display = 'block';
+                    document.getElementById('handicraftsSection').style.display = 'block';
+                    document.getElementById('ceremoniesSection').style.display = 'block';
+                } else if (category === 'seni') {
+                    this.renderArts(this.config.culture.arts || []);
+                    document.getElementById('artsSection').style.display = 'block';
+                    document.getElementById('handicraftsSection').style.display = 'none';
+                    document.getElementById('ceremoniesSection').style.display = 'none';
+                } else if (category === 'kerajinan') {
+                    this.renderHandicrafts(this.config.culture.handicrafts || []);
+                    document.getElementById('artsSection').style.display = 'none';
+                    document.getElementById('handicraftsSection').style.display = 'block';
+                    document.getElementById('ceremoniesSection').style.display = 'none';
+                } else if (category === 'upacara') {
+                    this.renderCeremonies(this.config.culture.ceremonies || []);
+                    document.getElementById('artsSection').style.display = 'none';
+                    document.getElementById('handicraftsSection').style.display = 'none';
+                    document.getElementById('ceremoniesSection').style.display = 'block';
+                }
+                
+                // Smooth scroll to first visible section
+                setTimeout(() => {
+                    const firstVisible = document.querySelector('section[id$="Section"]:not([style*="display: none"])');
+                    if (firstVisible) {
+                        firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            }
+            
+            renderArts(arts) {
+                const container = document.getElementById('artsGrid');
+                
+                if (!arts || arts.length === 0) {
+                    container.innerHTML = `
+                        <div class="col-12">
+                            <div class="empty-state">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <h4>Tidak ada kesenian yang ditemukan</h4>
+                                <p>Coba ubah filter pencarian Anda</p>
+                            </div>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                container.innerHTML = arts.map(art => `
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card hover-lift">
+                            <div class="card-img-wrapper">
+                                <img src="${art.image}" class="card-img-top" alt="${art.name}" loading="lazy" onerror="this.src='../images/placeholder.jpg'">
+                                <span class="card-badge">${art.category}</span>
+                                <div class="card-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    ${art.rating}
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">${art.name}</h5>
+                                <p class="card-text">${art.description}</p>
+                                
+                                <div class="culture-details">
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-geo-alt"></i> Asal</strong>
+                                        <span>${art.origin}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-clock"></i> Durasi</strong>
+                                        <span>${art.duration}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-people"></i> Pemain</strong>
+                                        <span>${art.performers}</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-3">
+                                    <h6 class="mb-2"><i class="bi bi-calendar-event text-primary"></i> Pertunjukan:</h6>
+                                    <div class="performance-tags">
+                                        ${(art.performances || []).map(perf => 
+                                            `<span class="badge bg-info">${perf}</span>`
+                                        ).join('')}
+                                    </div>
+                                </div>
+
+                                <div class="mt-3">
+                                    <div class="culture-tags">
+                                        ${(art.tags || []).map(tag => 
+                                            `<span class="chip">${tag}</span>`
+                                        ).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary w-100" onclick="window.budayaPage.showDetail('art', ${art.id})">
+                                    <i class="bi bi-info-circle"></i> Detail Lengkap
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            renderHandicrafts(handicrafts) {
+                const container = document.getElementById('handicraftsGrid');
+                
+                if (!handicrafts || handicrafts.length === 0) {
+                    container.innerHTML = `
+                        <div class="col-12">
+                            <div class="empty-state">
+                                <i class="bi bi-brush"></i>
+                                <h4>Tidak ada kerajinan yang ditemukan</h4>
+                                <p>Coba ubah filter pencarian Anda</p>
+                            </div>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                container.innerHTML = handicrafts.map(craft => `
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card hover-lift">
+                            <div class="card-img-wrapper">
+                                <img src="${craft.image}" class="card-img-top" alt="${craft.name}" loading="lazy" onerror="this.src='../images/placeholder.jpg'">
+                                <span class="card-badge">${craft.category}</span>
+                                <div class="card-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    ${craft.rating}
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">${craft.name}</h5>
+                                <p class="card-text">${craft.description}</p>
+                                
+                                <div class="culture-details">
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-hammer"></i> Bahan</strong>
+                                        <span>${(craft.materials || []).join(', ')}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-gear"></i> Proses</strong>
+                                        <span>${craft.process}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-tags"></i> Harga</strong>
+                                        <span>${craft.priceRange}</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-3">
+                                    <h6 class="mb-2"><i class="bi bi-box text-primary"></i> Produk:</h6>
+                                    <div class="product-tags">
+                                        ${(craft.motifs || []).map(motif => 
+                                            `<span class="badge bg-warning">${motif}</span>`
+                                        ).join('')}
+                                        ${(craft.products || []).map(product => 
+                                            `<span class="badge bg-warning">${product}</span>`
+                                        ).join('')}
+                                    </div>
+                                </div>
+
+                                <div class="mt-3">
+                                    <div class="culture-tags">
+                                        ${(craft.tags || []).map(tag => 
+                                            `<span class="chip">${tag}</span>`
+                                        ).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-success flex-grow-1" onclick="window.budayaPage.showDetail('craft', ${craft.id})">
+                                        <i class="bi bi-info-circle"></i> Detail
+                                    </button>
+                                    <button class="btn btn-success flex-grow-1" onclick="window.budayaPage.buyHandicraft(${craft.id})">
+                                        <i class="bi bi-cart"></i> Beli
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            renderCeremonies(ceremonies) {
+                const container = document.getElementById('ceremoniesGrid');
+                
+                if (!ceremonies || ceremonies.length === 0) {
+                    container.innerHTML = `
+                        <div class="col-12">
+                            <div class="empty-state">
+                                <i class="bi bi-calendar-event"></i>
+                                <h4>Tidak ada upacara yang ditemukan</h4>
+                                <p>Coba ubah filter pencarian Anda</p>
+                            </div>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                container.innerHTML = ceremonies.map(ceremony => `
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card hover-lift">
+                            <div class="card-img-wrapper">
+                                <img src="${ceremony.image}" class="card-img-top" alt="${ceremony.name}" loading="lazy" onerror="this.src='../images/placeholder.jpg'">
+                                <span class="card-badge">${ceremony.category}</span>
+                                <div class="card-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    ${ceremony.rating}
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">${ceremony.name}</h5>
+                                <p class="card-text">${ceremony.description}</p>
+                                
+                                <div class="culture-details">
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-calendar"></i> Waktu</strong>
+                                        <span>${ceremony.timing}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-geo-alt"></i> Lokasi</strong>
+                                        <span>${ceremony.location}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-people"></i> Peserta</strong>
+                                        <span>${ceremony.participants}</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-3">
+                                    <h6 class="mb-2"><i class="bi bi-stars text-primary"></i> Ritual:</h6>
+                                    <div class="ritual-tags">
+                                        ${(ceremony.rituals || []).map(ritual => 
+                                            `<span class="badge bg-danger">${ritual}</span>`
+                                        ).join('')}
+                                    </div>
+                                </div>
+
+                                <div class="mt-3">
+                                    <div class="culture-tags">
+                                        ${(ceremony.tags || []).map(tag => 
+                                            `<span class="chip">${tag}</span>`
+                                        ).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary w-100" onclick="window.budayaPage.showDetail('ceremony', ${ceremony.id})">
+                                    <i class="bi bi-info-circle"></i> Pelajari Lebih Lanjut
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            renderUpcomingEvents() {
+                const container = document.getElementById('upcomingEvents');
+                const events = (this.config.culture.culturalEvents || []).slice(0, 4);
+                
+                if (events.length === 0) {
+                    container.innerHTML = '<p class="text-muted">Tidak ada event mendatang</p>';
+                    return;
+                }
+                
+                container.innerHTML = events.map(event => `
+                    <div class="event-item">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap">
+                            <div class="flex-grow-1">
+                                <h6>${event.name}</h6>
+                                <small>
+                                    <i class="bi bi-calendar"></i> ${event.date}
+                                    <i class="bi bi-clock ms-2"></i> ${event.time}
+                                    <i class="bi bi-geo-alt ms-2"></i> ${event.location}
+                                </small>
+                                <p class="mt-2 mb-0">${event.description}</p>
+                            </div>
+                            <span class="badge bg-success mt-2 mt-md-0">${event.type}</span>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            showDetail(type, id) {
+                let item;
+                
+                if (type === 'art') {
+                    item = (this.config.culture.arts || []).find(a => a.id === id);
+                    if (item) this.renderArtDetail(item);
+                } else if (type === 'craft') {
+                    item = (this.config.culture.handicrafts || []).find(c => c.id === id);
+                    if (item) this.renderCraftDetail(item);
+                } else if (type === 'ceremony') {
+                    item = (this.config.culture.ceremonies || []).find(c => c.id === id);
+                    if (item) this.renderCeremonyDetail(item);
+                }
+                
+                if (item) {
+                    const modal = new bootstrap.Modal(document.getElementById('cultureDetailModal'));
+                    modal.show();
+                }
+            }
+            
+            renderArtDetail(art) {
+                const modalLabel = document.getElementById('cultureDetailModalLabel');
+                const modalContent = document.getElementById('cultureDetailContent');
+                
+                modalLabel.textContent = art.name;
+                
+                modalContent.innerHTML = `
+                    <div class="culture-info-section">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <img src="${art.image}" class="img-fluid rounded-3 shadow-sm" alt="${art.name}" onerror="this.src='../images/placeholder.jpg'">
+                            </div>
+                            <div class="col-md-7 mt-3 mt-md-0">
+                                <div class="mb-3">
+                                    <span class="badge bg-info me-2">${art.category}</span>
+                                    <span class="card-rating d-inline-flex">
+                                        <i class="bi bi-star-fill"></i>
+                                        ${art.rating} <small class="ms-1">(${art.reviews} reviews)</small>
+                                    </span>
+                                </div>
+                                <p class="lead">${art.description}</p>
+                                <div class="culture-details mt-3">
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-geo-alt"></i> Asal</strong>
+                                        <span>${art.origin}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-clock"></i> Durasi</strong>
+                                        <span>${art.duration}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-people"></i> Pemain</strong>
+                                        <span>${art.performers}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-award"></i> Makna</strong>
+                                        <span>${art.significance}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-book"></i> Sejarah & Latar Belakang</h5>
+                        <p>${art.history}</p>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-box-seam"></i> Perlengkapan Pertunjukan</h5>
+                        <div class="row">
+                            ${(art.equipment || []).map(item => `
+                                <div class="col-md-6 mb-2">
+                                    <div class="chip">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                        ${item}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-calendar-event"></i> Sering Ditampilkan Pada</h5>
+                        <div class="performance-tags">
+                            ${(art.performances || []).map(perf => `
+                                <span class="badge bg-info">${perf}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    ${art.venues && art.venues.length > 0 ? `
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-shop"></i> Tempat Latihan & Sanggar</h5>
+                        ${art.venues.map(venue => `
+                            <div class="venue-item">
+                                <h6>${venue.name}</h6>
+                                <p class="mb-1"><i class="bi bi-geo-alt text-primary"></i> ${venue.address}</p>
+                                <p class="mb-0"><i class="bi bi-telephone text-primary"></i> ${venue.contact}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                    ` : ''}
+                `;
+            }
+            
+            renderCraftDetail(craft) {
+                const modalLabel = document.getElementById('cultureDetailModalLabel');
+                const modalContent = document.getElementById('cultureDetailContent');
+                
+                modalLabel.textContent = craft.name;
+                
+                modalContent.innerHTML = `
+                    <div class="culture-info-section">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <img src="${craft.image}" class="img-fluid rounded-3 shadow-sm" alt="${craft.name}" onerror="this.src='../images/placeholder.jpg'">
+                            </div>
+                            <div class="col-md-7 mt-3 mt-md-0">
+                                <div class="mb-3">
+                                    <span class="badge bg-warning me-2">${craft.category}</span>
+                                    <span class="card-rating d-inline-flex">
+                                        <i class="bi bi-star-fill"></i>
+                                        ${craft.rating} <small class="ms-1">(${craft.reviews} reviews)</small>
+                                    </span>
+                                </div>
+                                <p class="lead">${craft.description}</p>
+                                <div class="price-tag mt-3">
+                                    <i class="bi bi-tags"></i>
+                                    ${craft.priceRange}
+                                </div>
+                                <div class="culture-details mt-3">
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-hammer"></i> Bahan</strong>
+                                        <span>${(craft.materials || []).join(', ')}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-gear"></i> Proses</strong>
+                                        <span>${craft.process}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-people"></i> Pengrajin</strong>
+                                        <span>${craft.artisans}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-clock-history"></i> Sejarah & Tradisi</h5>
+                        <p>${craft.history}</p>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-tools"></i> Teknik Pembuatan</h5>
+                        <div class="row">
+                            ${(craft.techniques || []).map(tech => `
+                                <div class="col-md-4 mb-2">
+                                    <div class="chip">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                        ${tech}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-basket"></i> Produk yang Dihasilkan</h5>
+                        <div class="product-tags">
+                            ${(craft.motifs || []).map(motif => `
+                                <span class="badge bg-warning">${motif}</span>
+                            `).join('')}
+                            ${(craft.products || []).map(product => `
+                                <span class="badge bg-warning">${product}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    ${craft.workshops && craft.workshops.length > 0 ? `
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-shop"></i> Workshop & Galeri</h5>
+                        ${craft.workshops.map(workshop => `
+                            <div class="workshop-item">
+                                <h6>${workshop.name}</h6>
+                                <p class="mb-1"><i class="bi bi-geo-alt text-primary"></i> ${workshop.address}</p>
+                                <p class="mb-1"><i class="bi bi-telephone text-primary"></i> ${workshop.contact}</p>
+                                <p class="mb-0"><i class="bi bi-clock text-primary"></i> ${workshop.openHours}</p>
+                            </div>
+                        `).join('')}
+                        
+                        <div class="mt-3">
+                            <button class="btn btn-success btn-lg" onclick="window.budayaPage.buyHandicraft(${craft.id})">
+                                <i class="bi bi-cart"></i> Beli Produk Ini
+                            </button>
+                        </div>
+                    </div>
+                    ` : ''}
+                `;
+            }
+            
+            renderCeremonyDetail(ceremony) {
+                const modalLabel = document.getElementById('cultureDetailModalLabel');
+                const modalContent = document.getElementById('cultureDetailContent');
+                
+                modalLabel.textContent = ceremony.name;
+                
+                modalContent.innerHTML = `
+                    <div class="culture-info-section">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <img src="${ceremony.image}" class="img-fluid rounded-3 shadow-sm" alt="${ceremony.name}" onerror="this.src='../images/placeholder.jpg'">
+                            </div>
+                            <div class="col-md-7 mt-3 mt-md-0">
+                                <div class="mb-3">
+                                    <span class="badge bg-danger me-2">${ceremony.category}</span>
+                                    <span class="card-rating d-inline-flex">
+                                        <i class="bi bi-star-fill"></i>
+                                        ${ceremony.rating} <small class="ms-1">(${ceremony.reviews} reviews)</small>
+                                    </span>
+                                </div>
+                                <p class="lead">${ceremony.description}</p>
+                                <div class="culture-details mt-3">
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-calendar"></i> Waktu</strong>
+                                        <span>${ceremony.timing}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-geo-alt"></i> Lokasi</strong>
+                                        <span>${ceremony.location}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-people"></i> Peserta</strong>
+                                        <span>${ceremony.participants}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong><i class="bi bi-star"></i> Makna</strong>
+                                        <span>${ceremony.significance}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-book"></i> Sejarah & Latar Belakang</h5>
+                        <p>${ceremony.history}</p>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-list-check"></i> Persiapan Upacara</h5>
+                        <div class="row">
+                            ${(ceremony.preparations || []).map((prep, index) => `
+                                <div class="col-md-6 mb-3">
+                                    <div class="chip">
+                                        <span class="badge bg-primary rounded-circle">${index + 1}</span>
+                                        ${prep}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-stars"></i> Ritual & Prosesi</h5>
+                        <div class="ritual-tags">
+                            ${(ceremony.rituals || []).map(ritual => `
+                                <span class="badge bg-danger">${ritual}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-basket"></i> Sesaji & Perlengkapan</h5>
+                        <div class="row">
+                            ${(ceremony.offerings || []).map(offering => `
+                                <div class="col-md-6 mb-2">
+                                    <div class="chip">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                        ${offering}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="culture-info-section">
+                        <h5><i class="bi bi-clock-history"></i> Jadwal Acara</h5>
+                        <div class="info-box">
+                            <h6>Rundown Upacara</h6>
+                            <p>Berikut adalah jadwal pelaksanaan upacara dari awal hingga akhir:</p>
+                        </div>
+                        <div class="schedule-timeline">
+                            ${(ceremony.schedule || []).map(item => `
+                                <div class="timeline-item">
+                                    <div class="timeline-time">${item.time}</div>
+                                    <div class="timeline-activity">${item.activity}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            buyHandicraft(craftId) {
+                const craft = (this.config.culture.handicrafts || []).find(c => c.id === craftId);
+                if (craft && craft.workshops && craft.workshops.length > 0) {
+                    this.showNotification(`Hubungi ${craft.workshops[0].name} di ${craft.workshops[0].contact} untuk pembelian`, 'info');
+                } else {
+                    this.showNotification('Fitur pembelian akan segera diaktifkan', 'info');
+                }
+            }
+            
+            updateStats() {
+                const totalArts = (this.config.culture.arts || []).length;
+                const totalHandicrafts = (this.config.culture.handicrafts || []).length;
+                const totalCeremonies = (this.config.culture.ceremonies || []).length;
+                const total = totalArts + totalHandicrafts + totalCeremonies;
+                
+                // Animate counter
+                this.animateCounter('totalCulture', total);
+            }
+            
+            animateCounter(elementId, target) {
+                const element = document.getElementById(elementId);
+                if (!element) return;
+                
+                let current = 0;
+                const increment = target / 50;
+                const duration = 1500;
+                const stepTime = duration / 50;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current) + '+';
+                    }
+                }, stepTime);
+            }
+            
+            showNotification(message, type = 'info') {
+                const container = document.getElementById('toastContainer');
+                
+                const icons = {
+                    success: 'check-circle-fill',
+                    error: 'x-circle-fill',
+                    info: 'info-circle-fill',
+                    warning: 'exclamation-triangle-fill'
+                };
+                
+                const colors = {
+                    success: 'success',
+                    error: 'danger',
+                    info: 'info',
+                    warning: 'warning'
+                };
+                
+                const notification = document.createElement('div');
+                notification.className = `toast-notification ${type}`;
+                notification.innerHTML = `
+                    <i class="bi bi-${icons[type]} text-${colors[type]}"></i>
+                    <span>${message}</span>
+                    <button type="button" class="btn-close ms-auto" aria-label="Close"></button>
+                `;
+                
+                container.appendChild(notification);
+                
+                // Close button
+                const closeBtn = notification.querySelector('.btn-close');
+                closeBtn.addEventListener('click', () => {
+                    notification.style.animation = 'slideInRight 0.3s ease reverse';
+                    setTimeout(() => notification.remove(), 300);
+                });
+                
+                // Auto remove after 5 seconds
+                setTimeout(() => {
+                    if (notification.parentElement) {
+                        notification.style.animation = 'slideInRight 0.3s ease reverse';
+                        setTimeout(() => notification.remove(), 300);
+                    }
+                }, 5000);
+            }
+        }
+        
+        // Initialize Budaya Page
+        document.addEventListener('DOMContentLoaded', () => {
+            window.budayaPage = new BudayaPage();
+        });
+    </script>
+</body>
+</html>

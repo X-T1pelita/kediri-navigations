@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Khas - Kediri Tourism</title>
+    <meta name="description" content="Temukan kuliner legendaris dan makanan khas Kediri yang terkenal di seluruh Indonesia">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/kuliner.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="spinner-ring"></div>
+        <p>Memuat Kuliner Kediri...</p>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.jpg" alt="Logo Kediri Tourism" height="40" width="40">
+                <span>Kediri Tourism</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wisata.html">Wisata</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="kuliner.html">Kuliner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="budaya.html">Budaya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="peta.html">Peta</a></li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <button class="btn btn-sm btn-outline-secondary" id="themeToggle">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                    <button class="btn btn-sm btn-primary" id="locationAccess">
+                        <i class="bi bi-geo-alt"></i> <span class="d-none d-md-inline">Lokasi</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Kuliner Khas</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold mb-3">Kuliner Khas Kediri</h1>
+                    <p class="lead mb-0 opacity-90">Rasakan kelezatan kuliner legendaris yang membuat Kediri terkenal di seluruh Indonesia</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <div class="header-stats">
+                        <h3 class="mb-0" id="totalCulinary">0+</h3>
+                        <small>Kuliner Khas</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culinary Highlights -->
+    <section class="section-padding scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kuliner Unggulan</h2>
+                <p class="section-subtitle">Jelajahi kelezatan kuliner khas Kediri yang sudah mendunia</p>
+            </div>
+            <div class="row g-4" id="culinaryHighlights">
+                <!-- Highlights akan di-load oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section scroll-reveal">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6">
+                    <select class="form-select" id="categoryFilter">
+                        <option value="">Semua Kategori</option>
+                        <!-- Options akan di-load oleh JavaScript -->
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <select class="form-select" id="priceFilter">
+                        <option value="">Semua Harga</option>
+                        <!-- Options akan di-load oleh JavaScript -->
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <select class="form-select" id="ratingFilter">
+                        <option value="">Semua Rating</option>
+                        <option value="5">⭐ 5.0</option>
+                        <option value="4">⭐ 4.0+</option>
+                        <option value="3">⭐ 3.0+</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Cari kuliner..." id="searchCulinary">
+                        <button class="btn btn-primary" type="button" onclick="window.kulinerPage.applyFilters()">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culinary Grid -->
+    <section class="section-padding scroll-reveal">
+        <div class="container">
+            <div class="row g-4" id="culinaryGrid">
+                <!-- Culinary items akan di-load oleh JavaScript -->
+            </div>
+            
+            <div id="loadingCulinary" class="text-center py-5">
+                <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3 text-muted">Memuat kuliner...</p>
+            </div>
+            
+            <div id="noResults" class="text-center py-5" style="display: none;">
+                <i class="bi bi-search display-1 text-muted"></i>
+                <h4 class="mt-3 text-muted">Tidak ada kuliner yang ditemukan</h4>
+                <p class="text-muted">Coba ubah filter pencarian Anda</p>
+                <button class="btn btn-primary mt-3" onclick="window.kulinerPage.clearFilters()">
+                    <i class="bi bi-arrow-clockwise"></i> Reset Filter
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Restaurants -->
+    <section class="section-padding bg-light scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tempat Makan Populer</h2>
+                <p class="section-subtitle">Rekomendasi tempat terbaik untuk menikmati kuliner khas Kediri</p>
+            </div>
+            
+            <div class="row g-4" id="restaurantsGrid">
+                <!-- Restaurants akan di-load oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Culinary Map -->
+    <section class="section-padding scroll-reveal">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">Peta Kuliner Kediri</h2>
+                    <p class="mb-4">Temukan lokasi tempat makan terbaik di Kediri dengan peta kuliner interaktif kami.</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Lokasi tepat warung dan restoran</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Rating dan review pengunjung</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Jam operasional terupdate</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Menu dan harga terkini</li>
+                    </ul>
+                    <a href="peta.html?filter=kuliner" class="btn btn-primary btn-lg mt-3">
+                        <i class="bi bi-map"></i> Buka Peta Kuliner
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="map-preview">
+                        <div class="text-center text-white">
+                            <i class="bi bi-map display-1"></i>
+                            <p class="mt-3 fw-bold">Peta Kuliner Interaktif</p>
+                            <small class="opacity-90">Temukan kuliner terdekat dari lokasi Anda</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="../images/logo.jpg" alt="Logo Kediri Tourism" height="40" class="mb-3">
+                    <p class="mb-4">Portal wisata resmi Kota Kediri yang menyediakan informasi lengkap tentang destinasi, kuliner, budaya, dan navigasi real-time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Menu</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="wisata.html">Wisata</a></li>
+                        <li><a href="kuliner.html">Kuliner</a></li>
+                        <li><a href="budaya.html">Budaya</a></li>
+                        <li><a href="peta.html">Peta</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h5>Informasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt"></i> Jl. Mayor Bismo No.1, Kediri</li>
+                        <li class="mb-2"><i class="bi bi-telephone"></i> (0354) 123456</li>
+                        <li class="mb-2"><i class="bi bi-envelope"></i> info@kediri-tourism.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0">&copy; 2024 Kediri Tourism. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for Kediri</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Culinary Detail Modal -->
+    <div class="modal fade culinary-detail-modal" id="culinaryDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="culinaryDetailModalLabel">Detail Kuliner</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="culinaryDetailContent">
+                        <!-- Content akan di-load oleh JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        class KulinerPage {
+            constructor() {
+                this.filters = {
+                    category: '',
+                    price: '',
+                    rating: '',
+                    search: ''
+                };
+                this.config = null;
+                this.searchTimeout = null;
+                this.init();
+            }
+            
+            async init() {
+                this.setupTheme();
+                this.setupEventListeners();
+                await this.loadConfig();
+                this.setupScrollEffects();
+                setTimeout(() => {
+                    document.getElementById('loading').classList.add('hidden');
+                }, 1000);
+            }
+            
+            async loadConfig() {
+                try {
+                    this.showLoading(true);
+                    const response = await fetch('../config/config-website.json');
+                    this.config = await response.json();
+                    
+                    if (this.config && this.config.culinary) {
+                        this.renderHighlights();
+                        this.renderFilters();
+                        this.renderCulinary();
+                        this.renderRestaurants();
+                        this.updateStats();
+                    } else {
+                        throw new Error('Data kuliner tidak ditemukan');
+                    }
+                    
+                    this.showLoading(false);
+                } catch (error) {
+                    console.error('Error loading config:', error);
+                    this.showNotification('Gagal memuat data kuliner', 'danger');
+                    this.showLoading(false);
+                }
+            }
+            
+            setupTheme() {
+                const theme = localStorage.getItem('theme') || 'light';
+                document.documentElement.setAttribute('data-bs-theme', theme);
+                const icon = document.querySelector('#themeToggle i');
+                icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
+            }
+            
+            setupEventListeners() {
+                document.getElementById('themeToggle').addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-bs-theme');
+                    const theme = current === 'light' ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                    localStorage.setItem('theme', theme);
+                    const icon = document.querySelector('#themeToggle i');
+                    icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
+                });
+
+                document.getElementById('locationAccess').addEventListener('click', () => {
+                    this.requestLocation();
+                });
+
+                document.getElementById('categoryFilter').addEventListener('change', (e) => {
+                    this.filters.category = e.target.value;
+                    this.applyFilters();
+                });
+                
+                document.getElementById('priceFilter').addEventListener('change', (e) => {
+                    this.filters.price = e.target.value;
+                    this.applyFilters();
+                });
+                
+                document.getElementById('ratingFilter').addEventListener('change', (e) => {
+                    this.filters.rating = e.target.value;
+                    this.applyFilters();
+                });
+                
+                document.getElementById('searchCulinary').addEventListener('input', (e) => {
+                    this.filters.search = e.target.value;
+                    clearTimeout(this.searchTimeout);
+                    this.searchTimeout = setTimeout(() => this.applyFilters(), 500);
+                });
+
+                window.addEventListener('scroll', () => {
+                    const navbar = document.querySelector('.navbar');
+                    const backToTop = document.getElementById('backToTop');
+                    
+                    if (window.scrollY > 100) {
+                        navbar.classList.add('scrolled');
+                        backToTop.classList.add('show');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                        backToTop.classList.remove('show');
+                    }
+                });
+
+                document.getElementById('backToTop').addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            setupScrollEffects() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.scroll-reveal').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            requestLocation() {
+                if (!navigator.geolocation) {
+                    this.showNotification('Browser tidak mendukung geolocation', 'danger');
+                    return;
+                }
+
+                this.showNotification('Mendeteksi lokasi...', 'info');
+
+                navigator.geolocation.getCurrentPosition(
+                    () => {
+                        this.showNotification('Lokasi terdeteksi!', 'success');
+                    },
+                    () => {
+                        this.showNotification('Gagal mengakses lokasi', 'danger');
+                    }
+                );
+            }
+            
+            renderHighlights() {
+                const container = document.getElementById('culinaryHighlights');
+                const highlights = this.config.culinary.highlights;
+                
+                // Update highlight colors to use green theme
+                const colorMap = {
+                    'primary': 'primary',
+                    'success': 'primary',
+                    'info': 'primary'
+                };
+                
+                container.innerHTML = highlights.map(highlight => `
+                    <div class="col-lg-4 col-md-6">
+                        <div class="culinary-highlight-card text-center p-4 rounded-3 bg-${colorMap[highlight.color] || 'primary'} text-white h-100">
+                            <i class="bi bi-${highlight.icon} display-4 mb-3"></i>
+                            <h4>${highlight.title}</h4>
+                            <p class="mb-0 opacity-90">${highlight.description}</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            renderFilters() {
+                const categoryFilter = document.getElementById('categoryFilter');
+                const priceFilter = document.getElementById('priceFilter');
+                
+                // Render category options
+                this.config.culinary.categories.forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category.value;
+                    option.textContent = `${category.name} (${category.count})`;
+                    categoryFilter.appendChild(option);
+                });
+                
+                // Render price options
+                this.config.culinary.priceRanges.forEach(price => {
+                    const option = document.createElement('option');
+                    option.value = price.value;
+                    option.textContent = price.range;
+                    priceFilter.appendChild(option);
+                });
+            }
+            
+            renderCulinary() {
+                const container = document.getElementById('culinaryGrid');
+                let culinary = this.config.culinary.items;
+                
+                // Apply filters
+                if (this.filters.category) {
+                    culinary = culinary.filter(item => item.category === this.filters.category);
+                }
+                if (this.filters.price) {
+                    culinary = culinary.filter(item => item.priceCategory === this.filters.price);
+                }
+                if (this.filters.rating) {
+                    const minRating = parseInt(this.filters.rating);
+                    culinary = culinary.filter(item => item.rating >= minRating);
+                }
+                if (this.filters.search) {
+                    const search = this.filters.search.toLowerCase();
+                    culinary = culinary.filter(item => 
+                        item.name.toLowerCase().includes(search) || 
+                        item.description.toLowerCase().includes(search) ||
+                        item.tags.some(tag => tag.toLowerCase().includes(search))
+                    );
+                }
+
+                if (culinary.length === 0) {
+                    container.innerHTML = '';
+                    document.getElementById('noResults').style.display = 'block';
+                    document.getElementById('loadingCulinary').style.display = 'none';
+                    return;
+                }
+
+                document.getElementById('noResults').style.display = 'none';
+                document.getElementById('loadingCulinary').style.display = 'none';
+
+                container.innerHTML = culinary.map(item => `
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card culinary-card h-100 hover-lift">
+                            <div class="card-img-wrapper">
+                                <img src="${item.image}" class="card-img-top" alt="${item.name}" loading="lazy">
+                                <span class="card-badge">${item.category}</span>
+                                <div class="card-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    ${item.rating}
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">${item.name}</h5>
+                                <p class="card-text text-muted">${item.description}</p>
+                                <div class="culinary-meta">
+                                    <small class="text-muted"><i class="bi bi-tag"></i> ${item.price}</small>
+                                </div>
+                                <div class="tags mt-3">
+                                    ${item.tags.map(tag => `<span class="badge bg-light text-dark me-1 mb-1">${tag}</span>`).join('')}
+                                </div>
+                                <div class="nutrition-info mt-3">
+                                    <small class="text-muted">
+                                        <i class="bi bi-fire"></i> ${item.nutrition.calories} 
+                                        <i class="bi bi-droplet ms-2"></i> Protein: ${item.nutrition.protein}
+                                        <i class="bi bi-basket ms-2"></i> Karb: ${item.nutrition.carbs}
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary btn-sm flex-grow-1" onclick="window.kulinerPage.showCulinaryDetail(${item.id})">
+                                        <i class="bi bi-info-circle"></i> Detail
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="window.kulinerPage.addToFavorite(${item.id})">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            renderRestaurants() {
+                const container = document.getElementById('restaurantsGrid');
+                const restaurants = this.config.culinary.restaurants;
+                
+                container.innerHTML = restaurants.map(resto => `
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card restaurant-card h-100 hover-lift">
+                            <div class="card-img-wrapper">
+                                <img src="${resto.image}" class="card-img-top" alt="${resto.name}" loading="lazy">
+                                <div class="card-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    ${resto.rating}
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">${resto.name}</h5>
+                                <p class="text-muted mb-2">Spesialis: ${resto.specialty}</p>
+                                <div class="rating mb-3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="fw-bold">${resto.rating}</span>
+                                    <small class="text-muted ms-1">(${resto.reviews} reviews)</small>
+                                </div>
+                                <div class="restaurant-info">
+                                    <p class="mb-1"><i class="bi bi-geo-alt"></i> ${resto.address}</p>
+                                    <p class="mb-1"><i class="bi bi-clock"></i> ${resto.openHours}</p>
+                                    <p class="mb-1"><i class="bi bi-tag"></i> ${resto.priceRange}</p>
+                                    <p class="mb-0"><i class="bi bi-signpost"></i> ${resto.distance}</p>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="${resto.link}" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-info-circle"></i> Detail
+                                    </a>
+                                    <button class="btn btn-primary btn-sm" onclick="window.kulinerPage.callRestaurant(${resto.id})">
+                                        <i class="bi bi-telephone"></i> Telepon
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            updateStats() {
+                const total = this.config.culinary.items.length;
+                document.getElementById('totalCulinary').textContent = `${total}+`;
+            }
+            
+            showCulinaryDetail(itemId) {
+                const culinary = this.config.culinary.items.find(item => item.id === itemId);
+                if (!culinary) return;
+                
+                const modalContent = document.getElementById('culinaryDetailContent');
+                modalContent.innerHTML = `
+                    <div class="culinary-info-section">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <img src="${culinary.image}" class="img-fluid rounded-3 shadow-sm" alt="${culinary.name}">
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="mb-2">${culinary.name}</h4>
+                                <div class="rating mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <span class="fw-bold">${culinary.rating}</span>
+                                    <small class="text-muted">(${culinary.reviews} reviews)</small>
+                                </div>
+                                <p class="mb-2 text-muted">${culinary.description}</p>
+                                <div class="d-flex gap-2 mb-3">
+                                    <span class="badge bg-primary">${culinary.category}</span>
+                                    <span class="badge bg-primary">${culinary.price}</span>
+                                </div>
+                                <div class="nutrition-chart">
+                                    <div class="nutrition-bar">
+                                        <div class="nutrition-progress">
+                                            <div class="nutrition-fill protein-fill" style="width: ${(parseInt(culinary.nutrition.protein) / 20) * 100}%"></div>
+                                        </div>
+                                        <small>Protein</small>
+                                    </div>
+                                    <div class="nutrition-bar">
+                                        <div class="nutrition-progress">
+                                            <div class="nutrition-fill carbs-fill" style="width: ${(parseInt(culinary.nutrition.carbs) / 50) * 100}%"></div>
+                                        </div>
+                                        <small>Karbohidrat</small>
+                                    </div>
+                                    <div class="nutrition-bar">
+                                        <div class="nutrition-progress">
+                                            <div class="nutrition-fill fat-fill" style="width: ${(parseInt(culinary.nutrition.fat) / 15) * 100}%"></div>
+                                        </div>
+                                        <small>Lemak</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="culinary-info-section">
+                        <h5 class="mb-3"><i class="bi bi-clock-history text-primary me-2"></i>Sejarah & Asal Usul</h5>
+                        <p class="text-muted">${culinary.history}</p>
+                    </div>
+                    
+                    <div class="culinary-info-section">
+                        <h5 class="mb-3"><i class="bi bi-basket text-primary me-2"></i>Bahan Utama</h5>
+                        <div class="ingredients-list">
+                            ${culinary.ingredients.map(ingredient => 
+                                `<span class="ingredient-tag">${ingredient}</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="culinary-info-section">
+                        <h5 class="mb-3"><i class="bi bi-shop text-primary me-2"></i>Tempat Terdekat</h5>
+                        <div>
+                            ${culinary.stores.map(store => `
+                                <div class="store-location-item">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">${store.name}</h6>
+                                            <p class="text-muted mb-1 small">${store.address}</p>
+                                            <div class="rating small">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <span>${store.rating}</span>
+                                            </div>
+                                        </div>
+                                        <span class="distance-badge">${store.distance}</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                const modal = new bootstrap.Modal(document.getElementById('culinaryDetailModal'));
+                modal.show();
+            }
+            
+            applyFilters() {
+                this.showLoading(true);
+                setTimeout(() => {
+                    this.renderCulinary();
+                }, 300);
+            }
+            
+            clearFilters() {
+                this.filters = {
+                    category: '',
+                    price: '',
+                    rating: '',
+                    search: ''
+                };
+                document.getElementById('categoryFilter').value = '';
+                document.getElementById('priceFilter').value = '';
+                document.getElementById('ratingFilter').value = '';
+                document.getElementById('searchCulinary').value = '';
+                this.applyFilters();
+            }
+            
+            showLoading(show) {
+                document.getElementById('loadingCulinary').style.display = show ? 'block' : 'none';
+                document.getElementById('culinaryGrid').style.display = show ? 'none' : '';
+            }
+            
+            addToFavorite(itemId) {
+                const favorites = JSON.parse(localStorage.getItem('culinaryFavorites') || '[]');
+                
+                if (favorites.includes(itemId)) {
+                    this.showNotification('Sudah ada di favorit', 'info');
+                } else {
+                    favorites.push(itemId);
+                    localStorage.setItem('culinaryFavorites', JSON.stringify(favorites));
+                    this.showNotification('Ditambahkan ke favorit!', 'success');
+                }
+            }
+            
+            callRestaurant(restaurantId) {
+                this.showNotification('Fitur telepon akan diaktifkan', 'info');
+            }
+            
+            showNotification(message, type) {
+                const types = {
+                    success: { icon: 'check-circle-fill', color: 'success' },
+                    danger: { icon: 'x-circle-fill', color: 'danger' },
+                    info: { icon: 'info-circle-fill', color: 'info' }
+                };
+                
+                const notif = types[type] || types.info;
+                
+                const alert = document.createElement('div');
+                alert.className = `toast-notification ${type}`;
+                alert.innerHTML = `
+                    <i class="bi bi-${notif.icon} fs-4 text-${type === 'error' ? 'danger' : type}"></i>
+                    <span>${message}</span>
+                `;
+
+                document.getElementById('toastContainer').appendChild(alert);
+
+                setTimeout(() => {
+                    alert.style.animation = 'slideInRight 0.3s ease reverse';
+                    setTimeout(() => alert.remove(), 300);
+                }, 3000);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            window.kulinerPage = new KulinerPage();
+        });
+    </script>
+</body>
+</html>
